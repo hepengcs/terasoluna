@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- アプリケーション全体のBean定義 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+	
+  <!-- ログオン済みチェック設定 -->
+  <!-- 
+  <bean id="authenticationController"
+        class="jp.terasoluna.sample.common.filter.SampleAuthenticationController">
+    <property name="authenticatedNoCheckPaths">
+      <list>
+        -->
+        <!-- ログイン済みチェックをしないパスリスト -->
+        <!-- 
+        <value>common.css</value>
+        <value>logon.do</value>
+        <value>welcome.do</value>
+      </list>
+    </property>
+  </bean>
+  -->
+  
+  <!-- アクセス権限チェック設定 -->
+  <!-- 
+  <bean id="authorizationController"
+        class="jp.terasoluna.sample.common.filter.SampleAuthorizationController">
+    <property name="authorizedCheckPaths">
+      <list>
+        <value>welcome.do</value>
+        <value>logon.do</value>
+        <value>common.css</value>
+      </list>
+    </property>
+    <property name="authorizedCodes">
+      <list>
+        <value>0</value>
+      </list>
+    </property>
+  </bean>
+  -->
+  
+  <!-- データソース設定 -->
+  <!-- WTPを利用してTomcatを起動する場合、WebContent/META-INF/context.xmlに
+       データソースの接続情報を設定してください。 -->
+  <!-- また、TomcatでJDBC接続を行う場合、ojdbc14.jarにクラスパスを通す必要があります。 -->
+  <bean id="TerasolunaSampleDataSource"
+        class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiName">
+      <!-- Tomcatの例  -->
+      <value>java:comp/env/jdbc/TerasolunaSampleDataSource</value>
+      <!-- Weblogicの例  -->
+      <!-- <value>jdbc/TerasolunaSampleDataSource</value>  -->
+    </property>
+  </bean>
+
+  <!-- トランザクション設定 -->
+  <bean id="transactionManager"
+    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource">
+      <ref bean="TerasolunaSampleDataSource"/>
+    </property>
+  </bean>
+
+  <bean id="attrSource" 
+      class="org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource">
+    <property name="properties">
+      <props>
+        <prop key="execute*">PROPAGATION_REQUIRED,-java.lang.Exception</prop>
+        <prop key="insert*">PROPAGATION_REQUIRED,-java.lang.Exception</prop>
+        <prop key="update*">PROPAGATION_REQUIRED,-java.lang.Exception</prop>
+        <prop key="delete*">PROPAGATION_REQUIRED,-java.lang.Exception</prop>
+        <prop key="select*">PROPAGATION_REQUIRED,readOnly,-java.lang.Exception</prop>
+      </props>
+    </property>
+  </bean>
+  
+  <!-- トランザクション処理（インタセプタの定義) -->
+  <bean id="transactionInterceptor" 
+      class="org.springframework.transaction.interceptor.TransactionInterceptor">
+    <property name="transactionManager">
+      <ref bean="transactionManager"/>
+    </property>
+    <property name="transactionAttributeSource">
+      <ref local="attrSource"/>
+    </property>
+  </bean>
+
+  <!-- ログ出力を行うインタセプタ -->
+  <!-- 
+  <bean id="debugInterceptor" 
+      class="jp.terasoluna.sample.common.SampleDebugInterceptor">
+  </bean>
+  -->
+  <!-- トランザクションのAutoProxy設定 -->
+  <bean id="autoProxy" 
+      class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+    <!-- ここに指定したインタセプタを適用する -->
+    <property name="interceptorNames">
+      <list>
+        <idref local="transactionInterceptor"/>
+        <!-- ログ出力を行うインタセプタ -->
+        <!-- <idref local="debugInterceptor"/>  -->
+      </list>
+    </property>
+    <!-- ここに指定したBean定義ファイルのIDに対して、インタセプタを適用する -->
+    <property name="beanNames">
+      <list>
+        <value>*DAO</value>
+      </list>
+    </property>
+  </bean>
+  
+    <!-- iBATIS定義 -->
+  <bean id="sqlMapClient"
+        class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+    <property name="configLocation" value="WEB-INF/sqlMapConfig.xml">
+    </property>
+    <property name="dataSource">
+      <ref bean="TerasolunaSampleDataSource"/>
+    </property>
+  </bean>
+
+  <!-- DAO定義 -->
+  <bean id="queryDAO" 
+        class="jp.terasoluna.fw.dao.ibatis.QueryDAOiBatisImpl">
+    <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+  </bean>
+  <bean id="updateDAO"
+        class="jp.terasoluna.fw.dao.ibatis.UpdateDAOiBatisImpl">
+    <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+  </bean>
+  <bean id="spDAO"
+        class="jp.terasoluna.fw.dao.ibatis.StoredProcedureDAOiBatisImpl">
+    <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+  </bean>
+
+  <!-- コードリスト定義 -->
+  <!-- 
+  <bean id="CL006_AUTH"
+    class="jp.terasoluna.fw.web.codelist.MappedCodeListLoader"
+    init-method="load">
+    <property name="codeListMap">
+      <map>
+        <entry key="1">
+          <value>オペレータ</value>
+        </entry>
+        <entry key="0">
+          <value>管理者</value>
+        </entry>
+      </map>
+    </property>
+  </bean>
+  -->
+  
+</beans>

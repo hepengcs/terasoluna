@@ -1,0 +1,1161 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<title>validateDateRange.jsのテストケース</title>
+
+<!--JsUnitファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/testcases/jsunit/app/jsUnitCore.js">
+</script>
+
+<!--テストJavaScriptファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/sources/jp/terasoluna/fw/web/struts/form/javascript/validateDateRange.js">
+</script>
+
+<!--テスト処理-->
+<script type="text/javascript">
+
+  /**
+   * setUp処理
+   */
+  function setUp() {
+    debug('setUp', 'start.');
+  }
+
+  /**
+   * tearDown処理
+   */
+  function tearDown() {
+    debug('tearDown', 'start.');
+  }
+
+  /**
+   * testValidateDateRange01()
+   */
+  function testValidateDateRange01(){
+    //デバックログ
+    debug('testValidateDateRange01', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[0]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange02()
+   */
+  function testValidateDateRange02(){
+    //デバックログ
+    debug('testValidateDateRange02', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[1]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange03_1()
+   */
+  function testValidateDateRange03_1(){
+    //デバックログ
+    debug('testValidateDateRange03_1', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[2]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange03_2()
+   */
+  function testValidateDateRange03_2(){
+    //デバックログ
+    debug('testValidateDateRange03_2', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[3]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange03_3()
+   */
+  function testValidateDateRange03_3(){
+    //デバックログ
+    debug('testValidateDateRange03_3', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[4]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange03_4()
+   */
+  function testValidateDateRange03_4(){
+    //デバックログ
+    debug('testValidateDateRange03_4', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[5]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange04()
+   */
+  function testValidateDateRange04(){
+    //デバックログ
+    debug('testValidateDateRange04', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[6]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange05_1()
+   */
+  function testValidateDateRange05_1(){
+    //デバックログ
+    debug('testValidateDateRange05_1', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[7]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange05_2()
+   */
+  function testValidateDateRange05_2(){
+    //デバックログ
+    debug('testValidateDateRange05_2', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[8]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange05_3()
+   */
+  function testValidateDateRange05_3(){
+    //デバックログ
+    debug('testValidateDateRange05_3', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[9]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange05_4()
+   */
+  function testValidateDateRange05_4(){
+    //デバックログ
+    debug('testValidateDateRange05_4', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[10]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange06()
+   */
+  function testValidateDateRange06(){
+    //デバックログ
+    debug('testValidateDateRange06', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[11]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange07_1()
+   */
+  function testValidateDateRange07_1(){
+    //デバックログ
+    debug('testValidateDateRange07_1', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[12]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange07_2()
+   */
+  function testValidateDateRange07_2(){
+    //デバックログ
+    debug('testValidateDateRange07_2', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[13]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange07_3()
+   */
+  function testValidateDateRange07_3(){
+    //デバックログ
+    debug('testValidateDateRange07_3', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[14]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange07_4()
+   */
+  function testValidateDateRange07_4(){
+    //デバックログ
+    debug('testValidateDateRange07_4', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[15]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange08_1()
+   */
+  function testValidateDateRange08_1(){
+    //デバックログ
+    debug('testValidateDateRange08_1', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[16]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange08_2()
+   */
+  function testValidateDateRange08_2(){
+    //デバックログ
+    debug('testValidateDateRange08_2', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[17]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange08_3()
+   */
+  function testValidateDateRange08_3(){
+    //デバックログ
+    debug('testValidateDateRange08_3', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[18]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange09()
+   */
+  function testValidateDateRange09(){
+    //デバックログ
+    debug('testValidateDateRange09', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[19]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange10()
+   */
+  function testValidateDateRange10(){
+    //デバックログ
+    debug('testValidateDateRange10', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateDateRange(document.forms[20]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate01()
+   */
+  function testIsValidDate01(){
+    //デバックログ
+    debug('testIsValidDate01', 'start.');
+
+    //準備
+    var day   = 2;
+    var month = -1;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate02()
+   */
+  function testIsValidDate02(){
+    //デバックログ
+    debug('testIsValidDate02', 'start.');
+
+    //準備
+    var day   = 2;
+    var month = 13;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate03()
+   */
+  function testIsValidDate03(){
+    //デバックログ
+    debug('testIsValidDate03', 'start.');
+
+    //準備
+    var day   = -1;
+    var month = 1;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate04()
+   */
+  function testIsValidDate04(){
+    //デバックログ
+    debug('testIsValidDate04', 'start.');
+
+    //準備
+    var day   = 32;
+    var month = 12;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate05()
+   */
+  function testIsValidDate05(){
+    //デバックログ
+    debug('testIsValidDate05', 'start.');
+
+    //準備
+    var day   = 31;
+    var month = 4;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate06()
+   */
+  function testIsValidDate06(){
+    //デバックログ
+    debug('testIsValidDate06', 'start.');
+
+    //準備
+    var day   = 31;
+    var month = 6;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate07()
+   */
+  function testIsValidDate07(){
+    //デバックログ
+    debug('testIsValidDate07', 'start.');
+
+    //準備
+    var day   = 31;
+    var month = 9;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate08()
+   */
+  function testIsValidDate08(){
+    //デバックログ
+    debug('testIsValidDate08', 'start.');
+
+    //準備
+    var day   = 31;
+    var month = 11;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate09()
+   */
+  function testIsValidDate09(){
+    //デバックログ
+    debug('testIsValidDate09', 'start.');
+
+    //準備
+    var day   = 30;
+    var month = 2;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate10()
+   */
+  function testIsValidDate10(){
+    //デバックログ
+    debug('testIsValidDate10', 'start.');
+
+    //準備
+    var day   = 29;
+    var month = 2;
+    var year  = 2005;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate11()
+   */
+  function testIsValidDate11(){
+    //デバックログ
+    debug('testIsValidDate11', 'start.');
+
+    //準備
+    var day   = 29;
+    var month = 2;
+    var year  = 1900;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate12()
+   */
+  function testIsValidDate12(){
+    //デバックログ
+    debug('testIsValidDate12', 'start.');
+
+    //準備
+    var day   = 28;
+    var month = 2;
+    var year  = 2004;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testIsValidDate13()
+   */
+  function testIsValidDate13(){
+    //デバックログ
+    debug('testIsValidDate13', 'start.');
+
+    //準備
+    var day   = 30;
+    var month = 2;
+    var year  = 2004;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testIsValidDate14()
+   */
+  function testIsValidDate14(){
+    //デバックログ
+    debug('testIsValidDate14', 'start.');
+
+    //準備
+    var day   = 29;
+    var month = 2;
+    var year  = 2000;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testIsValidDate15()
+   */
+  function testIsValidDate15(){
+    //デバックログ
+    debug('testIsValidDate15', 'start.');
+
+    //準備
+    var day   = 28;
+    var month = 2;
+    var year  = 1900;
+
+    //テスト実行
+    var bValid = false;
+	bValid = isValidDate(day, month, year);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateDateRange01にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm_dateRange() {
+    this.a0 = new Array("value01", "value01の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; "
+                  + "this.startDate=''; this.endDate=''; return this[varName];"));
+    this.a1 = new Array("value02", "value02の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern=null; "
+                  + "this.datePatternStrict=null; this.startDate=''; "
+                  + "this.endDate=''; return this[varName];"));
+    this.a2 = new Array("value03", "value03の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern=null; "
+                  + "this.datePatternStrict='';   this.startDate=''; "
+                  + "this.endDate=''; return this[varName];"));
+    this.a3 = new Array("value04", "value04の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern=''; "
+                  + "this.startDate=''; this.endDate=''; return this[varName];"));
+    this.a4 = new Array("value05", "value05の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; "
+                  + "this.startDate=''; this.endDate=''; return this[varName];"));
+    this.a5 = new Array("value06", "value06の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; "
+                  + "this.startDate=''; this.endDate=''; return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange02にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm2_dateRange() {
+    this.a0 = new Array("value10", "value10の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern=null; this.datePatternStrict='MMddyyyy'; "
+                  + "this.startDate=null; this.endDate=null; return this[varName];"));
+    this.a1 = new Array("value11", "value11の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MMdd/yyyy';  this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a2 = new Array("value12", "value12の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/ddyyyy';  this.startDate='asdf'; "
+                  + "this.endDate='asdf';       return this[varName];"));
+    this.a3 = new Array("value13", "value13の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='99/99/9999'; "
+                  + "this.endDate='99/99/9999'; return this[varName];"));
+    this.a4 = new Array("value14", "value14の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='01/03/2005'; return this[varName];"));
+    this.a5 = new Array("value15", "value15の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/02/2005'; "
+                  + "this.endDate='01/02/2005'; return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange03にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm3_1_dateRange() {
+    this.a0 = new Array("value16", "value16の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+  function validateForm3_2_dateRange() {
+    this.a1 = new Array("value17", "value17の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/03/2005'; "
+                  + "this.endDate='01/03/2005'; return this[varName];"));
+  }
+  function validateForm3_3_dateRange() {
+    this.a2 = new Array("value18", "value18の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='01/01/2005'; return this[varName];"));
+  }
+  function validateForm3_4_dateRange() {
+    this.a3 = new Array("value19", "value19の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange04にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm4_dateRange() {
+    this.a0 = new Array("value20", "value20の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='ddMMyyyy';   this.startDate=null; "
+                  + "this.endDate=null;         return this[varName];"));
+    this.a1 = new Array("value21", "value21の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='ddMM/yyyy';  this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a2 = new Array("value22", "value22の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MMyyyy';  this.startDate='asdf'; "
+                  + "this.endDate='asdf';       return this[varName];"));
+    this.a3 = new Array("value23", "value23の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='99/99/9999'; "
+                  + "this.endDate='99/99/9999'; return this[varName];"));
+    this.a4 = new Array("value24", "value24の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='03/01/2005'; return this[varName];"));
+    this.a5 = new Array("value25", "value25の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='02/01/2005'; "
+                  + "this.endDate='02/01/2005'; return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange05にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm5_1_dateRange() {
+    this.a0 = new Array("value26", "value26の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+  function validateForm5_2_dateRange() {
+    this.a1 = new Array("value27", "value27の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='03/01/2005'; "
+                  + "this.endDate='03/01/2005'; return this[varName];"));
+  }
+  function validateForm5_3_dateRange() {
+    this.a2 = new Array("value28", "value28の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='01/01/2005'; return this[varName];"));
+  }
+  function validateForm5_4_dateRange() {
+    this.a3 = new Array("value29", "value29の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange06にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm6_dateRange() {
+    this.a0 = new Array("value30", "value30の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyyMMdd';   this.startDate=null; "
+                  + "this.endDate=null;         return this[varName];"));
+    this.a1 = new Array("value31", "value31の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyyMM/dd';  this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a2 = new Array("value32", "value32の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MMdd';  this.startDate='asdf'; "
+                  + "this.endDate='asdf';       return this[varName];"));
+    this.a3 = new Array("value33", "value33の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='9999/99/99'; "
+                  + "this.endDate='9999/99/99'; return this[varName];"));
+    this.a4 = new Array("value34", "value34の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/01'; "
+                  + "this.endDate='2005/01/03'; return this[varName];"));
+    this.a5 = new Array("value35", "value35の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/02'; "
+                  + "this.endDate='2005/01/02'; return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange07にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm7_1_dateRange() {
+    this.a0 = new Array("value36", "value36の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+  function validateForm7_2_dateRange() {
+    this.a1 = new Array("value37", "value37の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/03'; "
+                  + "this.endDate='2005/01/03'; return this[varName];"));
+  }
+  function validateForm7_3_dateRange() {
+    this.a2 = new Array("value38", "value38の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/01'; "
+                  + "this.endDate='2005/01/01'; return this[varName];"));
+  }
+  function validateForm7_4_dateRange() {
+    this.a3 = new Array("value39", "value39の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange08にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm8_1_dateRange() {
+    this.a0 = new Array("value07", "value07の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/yyyy/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+  function validateForm8_2_dateRange() {
+    this.a1 = new Array("value08", "value08の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/yyyy/MM'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+  function validateForm8_3_dateRange() {
+    this.a2 = new Array("value09", "value09の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/dd/MM'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+
+  /**
+   * testValidateDateRange09にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm9_dateRange() {
+  }
+
+  /**
+   * testValidateDateRange10にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm10_dateRange() {
+    this.a0 = new Array("value40", "value40の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a1 = new Array("value41", "value41の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/03/2005'; "
+                  + "this.endDate='01/03/2005'; return this[varName];"));
+    this.a2 = new Array("value42", "value42の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='01/01/2005'; return this[varName];"));
+    this.a3 = new Array("value43", "value43の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/dd/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a4 = new Array("value44", "value44の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a5 = new Array("value45", "value45の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='03/01/2005'; "
+                  + "this.endDate='03/01/2005'; return this[varName];"));
+    this.a6 = new Array("value46", "value46の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate='01/01/2005'; "
+                  + "this.endDate='01/01/2005'; return this[varName];"));
+    this.a7 = new Array("value47", "value47の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='dd/MM/yyyy'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a8 = new Array("value48", "value48の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a9 = new Array("value49", "value49の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/03'; "
+                  + "this.endDate='2005/01/03'; return this[varName];"));
+    this.a10 = new Array("value50", "value50の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate='2005/01/01'; "
+                  + "this.endDate='2005/01/01'; return this[varName];"));
+    this.a11 = new Array("value51", "value51の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='yyyy/MM/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+    this.a12 = new Array("value52", "value52の日付は...から...までの範囲で入力してください。",
+      new Function ("varName", "this.datePattern='MM/yyyy/dd'; this.startDate=''; "
+                  + "this.endDate='';           return this[varName];"));
+  }
+
+</script>
+</head>
+<body>validateDateRange.jsのテストケース<p/>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange01にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm">
+
+  <!-- 1 -->
+  <input type="text" name="value01" value=""/>
+
+  <!-- 2 -->
+  <input type="text" name="value02" value="2005/01/02"/>
+
+  <!-- 3 -->
+  <input type="text" name="value03" value="2005/01/02"/>
+
+  <!-- 4 -->
+  <input type="text" name="value04" value="2005/01/02"/>
+
+  <!-- 5 -->
+  <input type="password" name="value05" value="2005/01/02"/>
+
+  <!-- 6 -->
+  <input type="text" name="value06" value="2005/01/02" disabled />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange02にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm2">
+
+  <!-- 10 -->
+  <input type="text" name="value10" value="01022005"/>
+
+  <!-- 11 -->
+  <input type="hidden" name="value11" value="0102/2005"/>
+
+  <!-- 12 -->
+  <textarea name="value12">01/022005</textarea>
+
+  <!-- 13 -->
+  <input type="text" name="value13" value="01/02/2005"/>
+
+  <!-- 14 -->
+  <input type="text" name="value14" value="01/02/2005"/>
+
+  <!-- 15 -->
+  <input type="text" name="value15" value="01/02/2005"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange03_?にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm3_1">
+
+  <!-- 16 -->
+  <input type="text" name="value16" value="99/99/9999"/>
+
+</form>
+
+<form name="validateForm3_2">
+
+  <!-- 17 -->
+  <input type="text" name="value17" value="01/02/2005"/>
+
+</form>
+
+<form name="validateForm3_3">
+
+  <!-- 18 -->
+  <input type="text" name="value18" value="01/02/2005"/>
+
+</form>
+
+<form name="validateForm3_4">
+
+  <!-- 19 -->
+  <input type="text" name="value19" value="asdf"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange04にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm4">
+
+  <!-- 20 -->
+  <input type="text" name="value20" value="02012005"/>
+
+  <!-- 21 -->
+  <input type="text" name="value21" value="0201/2005"/>
+
+  <!-- 22 -->
+  <input type="text" name="value22" value="02/012005"/>
+
+  <!-- 23 -->
+  <input type="text" name="value23" value="02/01/2005"/>
+
+  <!-- 24 -->
+  <input type="text" name="value24" value="02/01/2005"/>
+
+  <!-- 25 -->
+  <input type="text" name="value25" value="02/01/2005"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange05_?にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm5_1">
+
+  <!-- 26 -->
+  <input type="text" name="value26" value="99/99/9999"/>
+
+</form>
+
+<form name="validateForm5_2">
+
+  <!-- 27 -->
+  <input type="text" name="value27" value="02/01/2005"/>
+
+</form>
+
+<form name="validateForm5_3">
+
+  <!-- 28 -->
+  <input type="text" name="value28" value="02/01/2005"/>
+
+</form>
+
+<form name="validateForm5_4">
+
+  <!-- 29 -->
+  <input type="text" name="value29" value="asdf"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange06にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm6">
+
+  <!-- 30 -->
+  <input type="text" name="value30" value="20050102"/>
+
+  <!-- 31 -->
+  <input type="text" name="value31" value="200501/02"/>
+
+  <!-- 32 -->
+  <input type="text" name="value32" value="2005/0102"/>
+
+  <!-- 33 -->
+  <input type="text" name="value33" value="2005/01/02"/>
+
+  <!-- 34 -->
+  <input type="text" name="value34" value="2005/01/02"/>
+
+  <!-- 35 -->
+  <input type="text" name="value35" value="2005/01/02"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange07_?にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm7_1">
+
+  <!-- 36 -->
+  <input type="text" name="value36" value="9999/99/99"/>
+
+</form>
+
+<form name="validateForm7_2">
+
+  <!-- 37 -->
+  <input type="text" name="value37" value="2005/01/02"/>
+
+</form>
+
+<form name="validateForm7_3">
+
+  <!-- 38 -->
+  <input type="text" name="value38" value="2005/01/02"/>
+
+</form>
+
+<form name="validateForm7_4">
+
+  <!-- 39 -->
+  <input type="text" name="value39" value="asdf"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange08_?にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm8_1">
+
+  <!-- 7 -->
+  <input type="text" name="value07" value="01/01/2005"/>
+
+</form>
+
+<form name="validateForm8_2">
+
+  <!-- 8 -->
+  <input type="text" name="value08" value="01/01/2005"/>
+
+</form>
+
+<form name="validateForm8_3">
+
+  <!-- 9 -->
+  <input type="text" name="value09" value="01/01/2005"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange09にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm9">
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateDateRange10にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm10">
+
+  <!-- 40 -->
+  <input type="text" name="value40" value="99/99/9999"/>
+
+  <!-- 41 -->
+  <input type="text" name="value41" value="01/02/2005"/>
+
+  <!-- 42 -->
+  <input type="text" name="value42" value="01/02/2005"/>
+
+  <!-- 43 -->
+  <input type="text" name="value43" value="asdf"/>
+
+  <!-- 44 -->
+  <input type="text" name="value44" value="99/99/9999"/>
+
+  <!-- 45 -->
+  <input type="text" name="value45" value="02/01/2005"/>
+
+  <!-- 46 -->
+  <input type="text" name="value46" value="02/01/2005"/>
+
+  <!-- 47 -->
+  <input type="text" name="value47" value="asdf"/>
+
+  <!-- 48 -->
+  <input type="text" name="value48" value="9999/99/99"/>
+
+  <!-- 49 -->
+  <input type="text" name="value49" value="2005/01/02"/>
+
+  <!-- 50 -->
+  <input type="text" name="value50" value="2005/01/02"/>
+
+  <!-- 51 -->
+  <input type="text" name="value51" value="asdf"/>
+
+  <!-- 52 -->
+  <input type="text" name="value52" value="01/01/2005"/>
+</form>
+
+</body>
+</html>

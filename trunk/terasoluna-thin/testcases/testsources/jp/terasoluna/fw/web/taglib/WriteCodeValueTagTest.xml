@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+          "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="hoge1"
+	      class="jp.terasoluna.fw.web.taglib.WriteCodeValueTag_CodeListLoaderStub01"
+	      init-method="load"/>
+
+	<bean id="hoge2"
+	      class="jp.terasoluna.fw.web.codelist.MappedCodeListLoader"
+	      init-method="load">
+
+		<property name="codeListMap">
+			<map>
+				<entry key="000">
+					<value>コード0</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="hoge3"
+	      class="jp.terasoluna.fw.web.codelist.MappedCodeListLoader"
+	      init-method="load">
+
+		<property name="codeListMap">
+			<map>
+				<entry key="000">
+					<value>コード0</value>
+				</entry>
+				<entry key="002">
+					<value>コード2</value>
+				</entry>
+				<entry key="003">
+					<value>コード3</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="hoge4"
+	      class="jp.terasoluna.fw.web.codelist.MappedCodeListLoader"
+	      init-method="load">
+
+		<property name="codeListMap">
+			<map>
+				<entry key="001">
+					<value>コード1</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="hoge5"
+	      class="jp.terasoluna.fw.web.codelist.MappedCodeListLoader"
+	      init-method="load">
+
+		<property name="codeListMap">
+			<map>
+				<entry key="000">
+					<value>コード0</value>
+				</entry>
+				<entry key="001">
+					<value>コード1</value>
+				</entry>
+				<entry key="002">
+					<value>コード2</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="hoge6"
+	      class="java.lang.String" />
+</beans>

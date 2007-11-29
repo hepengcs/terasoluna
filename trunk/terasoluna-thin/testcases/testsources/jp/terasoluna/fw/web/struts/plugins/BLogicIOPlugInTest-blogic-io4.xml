@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE blogic-io PUBLIC "-//NTTDATA//DTD TERASOLUNA for Spring blogic-io 1.0//JA" "blogic-io.dtd">
+
+<blogic-io>
+  <!-- ログオン処理 -->
+  <action path="/logon">
+    <blogic-params>
+      <set-property property="test_params_property" blogic-property="test_params_blogic" source="form" />
+    </blogic-params>
+    <blogic-result>
+      <set-property property="test_result_property"  blogic-property="test_result_blogic" dest="session" />
+    </blogic-result>
+  </action>
+
+</blogic-io>

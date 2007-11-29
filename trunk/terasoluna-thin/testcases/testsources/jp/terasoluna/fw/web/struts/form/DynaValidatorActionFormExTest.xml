@@ -1,0 +1,6 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<form-bean  name="TEST_FORM"
+			type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx">
+<!-- その他の要素を記述するとテスト対象のsetメソッドを起動してしまうため、
+bean内の要素設定はsetup()メソッドで行なう -->
+</form-bean>

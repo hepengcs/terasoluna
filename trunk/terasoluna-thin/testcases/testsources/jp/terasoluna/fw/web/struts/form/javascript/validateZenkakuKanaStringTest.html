@@ -1,0 +1,562 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<title>validateZenkakuKanaString.jsのテストケース</title>
+
+<!--JsUnitファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/testcases/jsunit/app/jsUnitCore.js">
+</script>
+
+<!--テストJavaScriptファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/sources/jp/terasoluna/fw/web/struts/form/javascript/validateZenkakuKanaString.js">
+</script>
+
+<!--テストJavaScriptファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/sources/jp/terasoluna/fw/web/struts/form/javascript/validateUtilitiesEx.js">
+</script>
+
+<!--テスト処理-->
+<script type="text/javascript">
+
+  var zenkakuKanaList = "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー";
+
+  /**
+   * setUp処理
+   */
+  function setUp() {
+    debug('setUp', 'start.');
+  }
+
+  /**
+   * tearDown処理
+   */
+  function tearDown() {
+    debug('tearDown', 'start.');
+  }
+
+  /**
+   * testValidateZenkakuKanaString01()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm]
+   *         (状態) validateForm_zenkakuKanaStringの内容:
+   *                a0 = ["value1", "value1は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a1 = ["value2", "value2は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a2 = ["value3", "value3は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a3 = ["value4", "value4は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a4 = ["value5", "value5は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a5 = ["value6", "value6は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a6 = ["value7", "value7は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a7 = ["value8", "value8は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a8 = ["value9", "value9は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a9 = ["value10", "value10は全角カナで入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *           <input type="hidden" name="value1" value="ゼンカクカナ"/>
+   *           <input type="text" name="value2" value="ゼンカクカナ"/>
+   *           <textarea name="value3">ゼンカクカナ</textarea>
+   *           <select name="value4">
+   *             <option value="ゼンカクカナ" selected>ゼンカクカナ</option>
+   *             <option value="ゼンカクカナasdf">ゼンカクカナasdf</option>
+   *           </select>
+   *           <input type="radio" name="value5" value="ゼンカクカナ" checked />
+   *           <input type="text"  name="value6" value="ゼンカクカナasdf" disabled />
+   *           <input type="checkbox"  name="value7" checked />
+   *           <input type="password"  name="value8" value="ゼンカクカナasdf" />
+   *           <input type="text"  name="value9" value="" />
+   *           <select name="value10">
+   *           </select>
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフィールドに、全角カナ以外の値が入力されていない場合、
+   * 結果がtrueであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString01(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString01', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[0]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString02()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm2]
+   *         (状態) validateForm2_zenkakuKanaStringの内容:
+   *              a0 = ["value11", "value11は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="text"  name="value11" value="カな" />
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString02(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString02', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[1]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString03()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm3]
+   *         (状態) validateForm3_zenkakuKanaStringの内容:
+   *              a0 = ["value12", "value12は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden"  name="value12" value="カﾅ" />
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString03(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString03', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[2]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString04()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm4]
+   *         (状態) validateForm4_zenkakuKanaStringの内容:
+   *              a0 = ["value13", "value13は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <textarea name="value13">asdf</textarea>
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString04(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString04', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[3]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString05()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm5]
+   *         (状態) validateForm5_zenkakuKanaStringの内容:
+   *              a0 = ["value14", "value14は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <select name="value14">
+   *                 <option value="％＆　（" selected>％＆　（</option>
+   *                 <option value="カナ">カナ</option>
+   *                </select>
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString05(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString05', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[4]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString06()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm6]
+   *         (状態) validateForm6_zenkakuKanaStringの内容:
+   *              a0 = ["value15", "value15は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="radio" name="value15" value="カ　ナ" checked />
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString06(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString06', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[5]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString07()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm7]
+   *         (状態) validateForm7_zenkakuKanaStringの内容:
+   *              a0 = ["value16", "value16は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *              a1 = ["value17", "value17は全角カナで入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden"  name="value16" value="かな" />
+   *                <input type="text"  name="value17" value="かな" />
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、全角カナ以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString07(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString07', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[6]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString08()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm8]
+   *         (状態) validateForm8_zenkakuKanaStringの内容:空のファンクション。
+   *         (状態) form内のフィールド:空のform
+   *         (状態) zenkakuKanaList:
+   *        "アイウヴエオァィゥェォカキクケコヵヶガギグゲゴサシスセソザジズ
+   *         ゼゾタチツテトダヂヅデドナニヌネノハヒフヘホバビブベボパピプペ
+   *         ポマミムメモヤユヨャュョラリルレロワヮヰヱヲッンー"
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフォームオブジェクトにフィールドが、一つも存在しない場合、
+   * 結果が、trueであることを確認する。
+   * 
+   */
+  function testValidateZenkakuKanaString08(){
+    //デバックログ
+    debug('testValidateZenkakuKanaString08', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateZenkakuKanaString(document.forms[7]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateZenkakuKanaString01にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm_zenkakuKanaString() {
+    this.a0  = new Array("value1", "value1は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a1  = new Array("value2", "value2は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a2  = new Array("value3", "value3は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a3  = new Array("value4", "value4は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a4  = new Array("value5", "value5は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a5  = new Array("value6", "value6は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a6  = new Array("value7", "value7は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a7  = new Array("value8", "value8は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a8  = new Array("value9", "value9は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a9  = new Array("value10", "value10は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString02にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm2_zenkakuKanaString() {
+    this.a0 = new Array("value11", "value11は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString03にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm3_zenkakuKanaString() {
+    this.a0 = new Array("value12", "value12は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString04にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm4_zenkakuKanaString() {
+    this.a0 = new Array("value13", "value13は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString05にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm5_zenkakuKanaString() {
+    this.a0 = new Array("value14", "value14は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString06にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm6_zenkakuKanaString() {
+    this.a0 = new Array("value15", "value15は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString07にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm7_zenkakuKanaString() {
+    this.a0 = new Array("value16", "value16は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a1 = new Array("value17", "value17は全角カナで入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateZenkakuKanaString08にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm8_zenkakuKanaString() {
+  }
+
+</script>
+</head>
+<body>validateZenkakuKanaString.jsのテストケース<p/>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString01にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm">
+
+  <!-- 1 -->
+  <input type="hidden" name="value1" value="ゼンカクカナ"/>
+
+  <!-- 2 -->
+  <input type="text" name="value2" value="ゼンカクカナ"/>
+
+  <!-- 3 -->
+  <textarea name="value3">ゼンカクカナ</textarea>
+
+  <!-- 4 -->
+  <select name="value4">
+   <option value="ゼンカクカナ" selected>ゼンカクカナ</option>
+   <option value="ゼンカクカナasdf">ゼンカクカナasdf</option>
+  </select>
+
+  <!-- 5 -->
+  <input type="radio" name="value5" value="ゼンカクカナ" checked />
+
+  <!-- 6 -->
+  <input type="text"  name="value6" value="ゼンカクカナasdf" disabled />
+
+  <!-- 7 -->
+  <input type="checkbox"  name="value7" checked />
+
+  <!-- 8 -->
+  <input type="password"  name="value8" value="ゼンカクカナasdf" />
+
+  <!-- 9 -->
+  <input type="text"  name="value9" value="" />
+
+  <!-- 10 -->
+  <select name="value10">
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString02にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm2">
+
+  <!-- 11 -->
+  <input type="text"  name="value11" value="カな" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString03にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm3">
+
+  <!-- 12 -->
+  <input type="hidden"  name="value12" value="カﾅ" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString04にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm4">
+
+  <!-- 13 -->
+  <textarea name="value13">asdf</textarea>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString05にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm5">
+
+  <!-- 14 -->
+  <select name="value14">
+   <option value="％＆　（" selected>％＆　（</option>
+   <option value="カナ">カナ</option>
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString06にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm6">
+
+  <!-- 15 -->
+  <input type="radio" name="value15" value="カ　ナ" checked />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString07にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm7">
+
+  <!-- 16 -->
+  <input type="hidden"  name="value16" value="かな" />
+
+  <!-- 17 -->
+  <input type="text"  name="value17" value="かな" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateZenkakuKanaString08にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm8">
+</form>
+
+</body>
+</html>

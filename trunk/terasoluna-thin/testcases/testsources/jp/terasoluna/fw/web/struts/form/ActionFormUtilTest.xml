@@ -1,0 +1,6 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<form-bean  name="abc"
+			type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx">
+	<form-property name="aaa" type="java.lang.String" initial="null" size="0" />
+	<form-property name="field" type="java.lang.String" />
+</form-bean>

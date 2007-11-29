@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<form-bean  name="TEST_FORM"
+            type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx">
+    <form-property name="param1" type="java.lang.String" />
+    <form-property name="param2" type="java.lang.String" />
+    <form-property name="param3" type="java.util.HashMap" />
+</form-bean>

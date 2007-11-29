@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<form-bean  name="TEST_FORM"
+			type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx">
+  <form-property name="value" type="java.lang.String"/>
+  <form-property name="values" type="java.lang.String[]"/>
+  <form-property name="valueList" type="java.util.ArrayList"/>
+  <form-property name="map" type="java.util.HashMap"/>
+  <form-property name="row" type="jp.terasoluna.fw.web.struts.reset.ResetterImpl_JavaBeanStub01"/>
+  <form-property name="rows" type="jp.terasoluna.fw.web.struts.reset.ResetterImpl_JavaBeanStub01[]"/>
+  <form-property name="rowList" type="java.util.ArrayList"/>
+  <form-property name="booleanValue2" type="boolean" initial="true"/>
+  <form-property name="byteArray2" type="byte[]"/>
+  <form-property name="charValue1" type="char" initial="a"/>
+  <form-property name="doubleValue2" type="double" initial="4.9E-324"/>
+  <form-property name="floatValue2" type="float" initial="3.4028235E38"/>
+  <form-property name="shortValue2" type="short" initial="1"/>
+</form-bean>

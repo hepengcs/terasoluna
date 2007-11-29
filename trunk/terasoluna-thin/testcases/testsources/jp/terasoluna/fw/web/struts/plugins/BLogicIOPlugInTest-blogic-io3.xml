@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE blogic-io PUBLIC "-//NTTDATA//DTD TERASOLUNA for Spring blogic-io 1.0//JA" "blogic-io.dtd">
+
+<blogic-io>
+  <!-- ログオン処理 -->
+  <action path="/logon3">
+    <blogic-params bean-name="test_bean_name3-1">
+      <set-property property="test_params_property3-1" blogic-property="test_params_blogic3-1" source="form" />
+      <set-property property="test_params_property3-2" blogic-property="test_params_blogic3-2" source="form" />
+      <set-property property="test_params_property3-3" blogic-property="test_params_blogic3-3" source="form" />
+    </blogic-params>
+    <blogic-result>
+      <set-property property="test_result_property3-1"  blogic-property="test_result_blogic3-1" dest="session" />
+      <set-property property="test_result_property3-2"  blogic-property="test_result_blogic3-2" dest="session" />
+      <set-property property="test_result_property3-3"  blogic-property="test_result_blogic3-3" dest="session" />
+    </blogic-result>
+  </action>
+
+  <action path="/duplicate">
+    <blogic-params bean-name="test_bean_name3-2">
+      <set-property property="duplicate_params_property2" blogic-property="duplicate_params_blogic2" source="form" />
+    </blogic-params>
+    <blogic-result>
+      <set-property property="duplicate_result_property2"  blogic-property="duplicate_result_blogic2" dest="session" />
+    </blogic-result>
+  </action>
+
+  <!-- DBロールバック処理 -->
+  <action path="/db3">
+    <blogic-params bean-name="test_bean_name3-3">
+    </blogic-params>
+    <blogic-result>
+    </blogic-result>
+  </action>
+
+</blogic-io>

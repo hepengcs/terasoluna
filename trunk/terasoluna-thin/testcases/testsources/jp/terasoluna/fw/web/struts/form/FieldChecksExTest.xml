@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<form-bean  name="TEST_FORM"
+			type="jp.terasoluna.fw.web.struts.form.DynaValidatorActionFormEx">
+  <form-property name="row" type="jp.terasoluna.fw.web.struts.form.FieldChecksEx_JavaBeanStub01"/>
+  <form-property name="rows" type="jp.terasoluna.fw.web.struts.form.FieldChecksEx_JavaBeanStub01[]"/>
+  <form-property name="rowList" type="java.util.ArrayList"/>
+</form-bean>

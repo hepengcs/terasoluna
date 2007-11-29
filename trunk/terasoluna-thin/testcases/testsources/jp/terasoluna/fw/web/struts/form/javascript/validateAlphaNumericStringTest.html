@@ -1,0 +1,521 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<title>validateAlphaNumericString.jsのテストケース</title>
+
+<!--JsUnitファイルのロード-->
+<script type="text/javascript" src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/testcases/jsunit/app/jsUnitCore.js"></script>
+
+<!--テストJavaScriptファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/sources/jp/terasoluna/fw/web/struts/form/javascript/validateAlphaNumericString.js">
+</script>
+
+<!--テスト処理-->
+<script type="text/javascript">
+
+  /**
+   * setUp処理
+   */
+  function setUp() {
+    debug('setUp', 'start.');
+  }
+
+  /**
+   * tearDown処理
+   */
+  function tearDown() {
+    debug('tearDown', 'start.');
+  }
+
+  /**
+   * testValidateAlphaNumericString01()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm]
+   *         (状態) validateForm_alphaNumericStringの内容:
+   *                a0 = ["value1", "value1は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a1 = ["value2", "value2は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a2 = ["value3", "value3は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a3 = ["value4", "value4は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a4 = ["value5", "value5は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a5 = ["value6", "value6は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a6 = ["value7", "value7は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a7 = ["value8", "value8は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a8 = ["value9", "value9は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a9 = ["value10", "value10は半角英数で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden" name="value1" value="asdf"/>
+   *                <input type="text" name="value2" value="asdf"/>
+   *                <textarea name="value3">asdf</textarea>
+   *                <select name="value4">
+   *                  <option value="asdf" selected>asdf</option>
+   *                  <option value="zxcあv">zxcあv</option>
+   *                </select>
+   *                <input type="radio" name="value5" value="asdf" checked />
+   *                <input type="text"  name="value6" value="asdあf" disabled />
+   *                <input type="checkbox"  name="value7" checked />
+   *                <input type="password"  name="value8" value="asdあf" />
+   *                <input type="text"  name="value9" value="" />
+   *                <select name="value10">
+   *                </select>
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフィールドに、英数字以外の値が入力されていない場合、
+   * 結果がtrueであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString01(){
+    //デバックログ
+    debug('testValidateAlphaNumericString01', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[0]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString02()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm2]
+   *         (状態) validateForm2_alphaNumericStringの内容:
+   *              a0 = ["value11", "value11は半角英数で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="text"  name="value11" value="aあ1" />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString02(){
+    //デバックログ
+    debug('testValidateAlphaNumericString02', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[1]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString03()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm3]
+   *         (状態) validateForm3_alphaNumericStringの内容:
+   *              a0 = ["value12", "value12は半角英数で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden" name="value12" value="あいうえお"/>
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString03(){
+    //デバックログ
+    debug('testValidateAlphaNumericString03', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[2]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString04()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm4]
+   *         (状態) validateForm4_alphaNumericStringの内容:
+   *              a0 = ["value13", "value13は半角英数で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <textarea name="value13">ａｓｄｆ</textarea>
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString04(){
+    //デバックログ
+    debug('testValidateAlphaNumericString04', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[3]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString05()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm5]
+   *         (状態) validateForm5_alphaNumericStringの内容:
+   *              a0 = ["value14", "value14は半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <select name="value16">
+   *                 <option value="%& (" selected>%& (</option>
+   *                 <option value="zxcv">zxcv</option>
+   *                </select>
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString05(){
+    //デバックログ
+    debug('testValidateAlphaNumericString05', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[4]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString06()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm6]
+   *         (状態) validateForm6_alphaNumericStringの内容:
+   *              a0 = ["value15", "value15は半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="radio" name="value15" value="a　d" checked />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString06(){
+    //デバックログ
+    debug('testValidateAlphaNumericString06', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[5]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString07()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm7]
+   *         (状態) validateForm7_alphaNumericStringの内容:
+   *              a0 = ["value16", "value16は半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *              a1 = ["value17", "value17は半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden" name="value16" value="ａｓｄｆ"/>
+   *                <input type="text"  name="value17" value="ａｓｄｆ" />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString07(){
+    //デバックログ
+    debug('testValidateAlphaNumericString07', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[6]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString08()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm8]
+   *         (状態) validateForm8_alphaNumericStringの内容:空のファンクション。
+   *         (状態) form内のフィールド:空のform
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフォームオブジェクトにフィールドが、一つも存在しない場合、
+   * 結果が、trueであることを確認する。
+   * 
+   */
+  function testValidateAlphaNumericString08(){
+    //デバックログ
+    debug('testValidateAlphaNumericString08', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateAlphaNumericString(document.forms[7]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateAlphaNumericString01にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm_alphaNumericString() {
+    this.a0  = new Array("value1", "value1は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a1  = new Array("value2", "value2は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a2  = new Array("value3", "value3は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a3  = new Array("value4", "value4は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a4  = new Array("value5", "value5は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a5  = new Array("value6", "value6は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a6  = new Array("value7", "value7は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a7  = new Array("value8", "value8は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a8  = new Array("value9", "value9は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+    this.a9  = new Array("value10", "value10は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateAlphaNumericString02にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm2_alphaNumericString() {
+    this.a0 = new Array("value11", "value11は半角英数で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateAlphaNumericString03にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm3_alphaNumericString() {
+    this.a0 = new Array("value12", "value12は半角英数で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateAlphaNumericString04にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm4_alphaNumericString() {
+    this.a0  = new Array("value13", "value13は半角英数で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+  
+  /**
+   * testValidateAlphaNumericString05にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm5_alphaNumericString() {
+    this.a0  = new Array("value14", "value14は半角英数で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+  
+  /**
+   * testValidateAlphaNumericString06にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm6_alphaNumericString() {
+    this.a0  = new Array("value15", "value15は半角英数で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+  
+  /**
+   * testValidateAlphaNumericString07にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm7_alphaNumericString() {
+    this.a0  = new Array("value16", "value16は半角英数で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a1  = new Array("value17", "value17は半角英数で入力してください。", 
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateAlphaNumericString08にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm8_alphaNumericString() {
+  }
+
+</script>
+</head>
+<body>validateAlphaNumericString.jsのテストケース<p/>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString01にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm">
+
+  <!-- 1 -->
+  <input type="hidden" name="value1" value="asdf"/>
+
+  <!-- 2 -->
+  <input type="text" name="value2" value="asdf"/>
+
+  <!-- 3 -->
+  <textarea name="value3">asdf</textarea>
+
+  <!-- 4 -->
+  <select name="value4">
+   <option value="asdf" selected>asdf</option>
+   <option value="zxcあv">zxcあv</option>
+  </select>
+
+  <!-- 5 -->
+  <input type="radio" name="value5" value="asdf" checked />
+
+  <!-- 6 -->
+  <input type="text"  name="value6" value="asdあf" disabled />
+
+  <!-- 7 -->
+  <input type="checkbox"  name="value7" checked />
+
+  <!-- 8 -->
+  <input type="password"  name="value8" value="asdあf" />
+
+  <!-- 9 -->
+  <input type="text"  name="value9" value="" />
+
+  <!-- 10 -->
+  <select name="value10">
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString02にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm2">
+
+  <!-- 11 -->
+  <input type="text"  name="value11" value="aあ1" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString03にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm3">
+
+  <!-- 12 -->
+  <input type="hidden" name="value12" value="あいうえお"/>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString04にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm4">
+
+  <!-- 13 -->
+  <textarea name="value13">ａｓｄｆ</textarea>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString05にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm5">
+
+  <!-- 14 -->
+  <select name="value14">
+   <option value="%& (" selected>%& (</option>
+   <option value="zxcv">zxcv</option>
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString06にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm6">
+
+  <!-- 15 -->
+  <input type="radio" name="value15" value="a　d" checked />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString07にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm7">
+
+  <!-- 16 -->
+  <input type="hidden" name="value16" value="ａｓｄｆ"/>
+  
+  <!-- 17 -->
+  <input type="text"  name="value17" value="ａｓｄｆ" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateAlphaNumericString08にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm8">
+</form>
+
+</body>
+</html>

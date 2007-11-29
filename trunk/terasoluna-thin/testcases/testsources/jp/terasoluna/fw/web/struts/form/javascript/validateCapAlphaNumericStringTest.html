@@ -1,0 +1,517 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<title>validateCapAlphaNumericString.jsのテストケース</title>
+
+<!--JsUnitファイルのロード-->
+<script type="text/javascript" src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/testcases/jsunit/app/jsUnitCore.js"></script>
+
+<!--テストJavaScriptファイルのロード-->
+<script type="text/javascript"
+        src="C:/eclipse3.1/workspace/terasoluna-thinclient-struts/sources/jp/terasoluna/fw/web/struts/form/javascript/validateCapAlphaNumericString.js">
+</script>
+
+<!--テスト処理-->
+<script type="text/javascript">
+
+  /**
+   * setUp処理
+   */
+  function setUp() {
+    debug('setUp', 'start.');
+  }
+
+  /**
+   * tearDown処理
+   */
+  function tearDown() {
+    debug('tearDown', 'start.');
+  }
+
+  /**
+   * testValidateCapAlphaNumericString01()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm]
+   *         (状態) validateForm_capAlphaNumericStringの内容:
+   *                a0 = ["value1", "value1は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a1 = ["value2", "value2は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a2 = ["value3", "value3は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a3 = ["value4", "value4は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a4 = ["value5", "value5は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a5 = ["value6", "value6は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a6 = ["value7", "value7は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a7 = ["value8", "value8は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a8 = ["value9", "value9は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *                a9 = ["value10", "value10は大文字半角英数字で入力してください。",
+   *                     new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden" name="value1" value="ASDF"/>
+   *                <input type="text" name="value2" value="ASDF"/>
+   *                <textarea name="value3">ASDF</textarea>
+   *                <select name="value4">
+   *                  <option value="ASDF" selected>ASDF</option>
+   *                  <option value="ZXcV">ZXcV</option>
+   *                </select>
+   *                <input type="radio" name="value5" value="ASDF" checked />
+   *                <input type="text"  name="value6" value="ASdF" disabled />
+   *                <input type="checkbox"  name="value7" checked />
+   *                <input type="password"  name="value8" value="ASdF" />
+   *                <input type="text"  name="value9" value="" />
+   *                <select name="value10">
+   *                </select>
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフィールドに、大文字半角英数字以外の値が入力されていない場合、
+   * 結果がtrueであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString01(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString01', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[0]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString02()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm2]
+   *         (状態) validateForm2_capAlphaNumericStringの内容:
+   *              a0 = ["value11", "value11は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="text"  name="value11" value="あa1" />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString02(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString02', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[1]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString03()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm3]
+   *         (状態) validateForm3_capAlphaNumericStringの内容:
+   *              a0 = ["value12", "value12は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden"  name="value12" value="ん" />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString03(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString03', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[2]);
+
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString04()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm4]
+   *         (状態) validateForm4_capAlphaNumericStringの内容:
+   *              a0 = ["value13", "value13は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <textarea name="value13">asdf</textarea>
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString04(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString04', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[3]);
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString05()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm5]
+   *         (状態) validateForm5_capAlphaNumericStringの内容:
+   *              a0 = ["value14", "value14は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                  <select name="value14">
+   *                    <option value="%& (" selected>%& (</option>
+   *                    <option value="ZXCV">ZXCV</option>
+   *                  </select>
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString05(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString05', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[4]);
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString06()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm6]
+   *         (状態) validateForm6_capAlphaNumericStringの内容:
+   *              a0 = ["value15", "value15は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="radio" name="value15" value="A　D" checked />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString06(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString06', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[5]);
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString07()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm7]
+   *         (状態) validateForm7_capAlphaNumericStringの内容:
+   *              a0 = ["value16", "value16は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *              a1 = ["value17", "value17は大文字半角英数字で入力してください。",
+   *                    new Function ("varName", " return this[varName];")]
+   *         (状態) form内のフィールド:
+   *                <input type="hidden"  name="value16" value="asdf" />
+   *                <input type="text"  name="value17" value="asdf" />
+   * 
+   * 期待値：(戻り値) boolean:false(チェック結果)
+   * 
+   * チェック対象のフィールドが、大文字半角英数字以外の値が入力されていた場合、
+   * 結果が、falseであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString07(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString07', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[6]);
+    assertFalse(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString08()
+   * 
+   * (正常系)
+   * 観点：C
+   * 
+   * 入力値：(引数) form:チェック対象の値を持つフィールドのフォームオブジェクト
+   *                [validateForm8]
+   *         (状態) validateForm8_capAlphaNumericStringの内容:空のファンクション。
+   *         (状態) form内のフィールド:空のform
+   * 
+   * 期待値：(戻り値) boolean:true(チェック結果)
+   * 
+   * チェック対象のフォームオブジェクトにフィールドが、一つも存在しない場合、
+   * 結果が、trueであることを確認する。
+   * 
+   */
+  function testValidateCapAlphaNumericString08(){
+    //デバックログ
+    debug('testValidateCapAlphaNumericString08', 'start.');
+
+    //テスト実行
+    var bValid = false;
+	bValid = validateCapAlphaNumericString(document.forms[7]);
+
+    assertTrue(bValid);
+
+  }
+
+  /**
+   * testValidateCapAlphaNumericString01にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm_capAlphaNumericString() {
+    this.a0  = new Array("value1", "value1は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a1  = new Array("value2", "value2は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a2  = new Array("value3", "value3は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a3  = new Array("value4", "value4は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a4  = new Array("value5", "value5は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a5  = new Array("value6", "value6は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a6  = new Array("value7", "value7は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a7  = new Array("value8", "value8は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a8  = new Array("value9", "value9は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+    this.a9  = new Array("value10", "value10は大文字半角英数字で入力してください。",
+                         new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString02にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm2_capAlphaNumericString() {
+    this.a0 = new Array("value11", "value11は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString03にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm3_capAlphaNumericString() {
+    this.a0 = new Array("value12", "value12は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString04にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm4_capAlphaNumericString() {
+    this.a0 = new Array("value13", "value13は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString05にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm5_capAlphaNumericString() {
+    this.a0 = new Array("value14", "value14は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString06にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm6_capAlphaNumericString() {
+    this.a0 = new Array("value15", "value15は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+  
+  /**
+   * testValidateCapAlphaNumericString07にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm7_capAlphaNumericString() {
+    this.a0 = new Array("value16", "value16は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+    this.a1 = new Array("value17", "value17は大文字半角英数字で入力してください。",
+                        new Function ("varName", " return this[varName];"));
+  }
+
+  /**
+   * testValidateCapAlphaNumericString08にて呼び出されるテスト用ファンクション。
+   */
+  function validateForm8_capAlphaNumericString() {
+  }
+
+</script>
+</head>
+<body>validateCapAlphaNumericString.jsのテストケース<p/>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString01にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm">
+
+  <!-- 1 -->
+  <input type="hidden" name="value1" value="ASDF"/>
+
+  <!-- 2 -->
+  <input type="text" name="value2" value="ASDF"/>
+
+  <!-- 3 -->
+  <textarea name="value3">ASDF</textarea>
+
+  <!-- 4 -->
+  <select name="value4">
+   <option value="ASDF" selected>ASDF</option>
+   <option value="ZXcV">ZXcV</option>
+  </select>
+
+  <!-- 5 -->
+  <input type="radio" name="value5" value="ASDF" checked />
+
+  <!-- 6 -->
+  <input type="text"  name="value6" value="ASdF" disabled />
+
+  <!-- 7 -->
+  <input type="checkbox"  name="value7" checked />
+
+  <!-- 8 -->
+  <input type="password"  name="value8" value="ASdF" />
+
+  <!-- 9 -->
+  <input type="text"  name="value9" value="" />
+
+  <!-- 10 -->
+  <select name="value10">
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString02にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm2">
+
+  <!-- 11 -->
+  <input type="text"  name="value11" value="あa1" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString03にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm3">
+
+  <!-- 12 -->
+  <input type="hidden"  name="value12" value="ん" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString04にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm4">
+
+  <!-- 13 -->
+  <textarea name="value13">asdf</textarea>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString05にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm5">
+
+  <!-- 14 -->
+  <select name="value14">
+   <option value="%& (" selected>%& (</option>
+   <option value="ZXCV">ZXCV</option>
+  </select>
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString06にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm6">
+
+  <!-- 15 -->
+  <input type="radio" name="value15" value="A　D" checked />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString07にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm7">
+
+  <!-- 16 -->
+  <input type="hidden" name="value16" value="asdf"/>
+  
+  <!-- 17 -->
+  <input type="text"  name="value17" value="asdf" />
+
+</form>
+
+<!----------------------------------------------------------------------------
+     testValidateCapAlphaNumericString08にて使用。
+----------------------------------------------------------------------------->
+<form name="validateForm8">
+</form>
+
+</body>
+</html>

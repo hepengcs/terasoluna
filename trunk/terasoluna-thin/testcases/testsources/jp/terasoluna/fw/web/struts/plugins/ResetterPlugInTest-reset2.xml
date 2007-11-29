@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE reset PUBLIC "-//NTTDATA//DTD TERASOLUNA for Spring reset 1.0//JA"
+                       "dtd/reset.dtd">
+
+<reset>
+  <action path="/aaa/AAA2">
+    <property-reset name="field2-1" />
+  </action>
+  <action path="/bbb/BBB2">
+    <property-reset name="field2-1" />
+    <property-reset name="field2-2" select="true" />
+    <property-reset name="field2-3" select="true" />
+  </action>
+  <action path="/ccc/CCC2">
+    <property-reset name="field2-1" />
+    <property-reset name="field2-2" select="false" />
+  </action>
+  <action path="/duplicate">
+    <property-reset name="duplicate1" />
+  </action>
+</reset>

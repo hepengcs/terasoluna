@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans 
+  PUBLIC "-//SPRING//DTD BEAN//EN" 
+  "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  
+  <bean id="testControllerStub01"
+        class="jp.terasoluna.fw.web.thin.AbstractControlFilter_ControllerStub01"/>
+
+  <bean id="testControllerStub02"
+        class="jp.terasoluna.fw.web.thin.AbstractControlFilter_ControllerStub02"/>
+ 
+  <bean id="testControllerStub03"
+        class="jp.terasoluna.fw.web.thin.AbstractControlFilter_ControllerStub03"
+        abstract="true"/>
+  
+  <bean id="object"
+        class="java.lang.Object"
+        />      
+              
+</beans>
