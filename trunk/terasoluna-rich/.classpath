@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="sources"/>
+	<classpathentry kind="src" output="testcases/testclasses" path="testcases/testsources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/spring.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-dao.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/junit-addons-1.4.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/spring-mock.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/terasoluna-utlib.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/terasoluna-utlib-spring.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/junit-3.8.2.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-oxm.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-commons.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/castor-1.0.5.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/velocity-1.5.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/xercesImpl.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>
