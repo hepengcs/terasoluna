@@ -18,8 +18,8 @@ package jp.terasoluna.fw.util;
 
 public interface ProxyUtil_IJavaBeanStub01 {
 
-	String getName();
+    String getName();
 
-	void setName(String name);
+    void setName(String name);
 
 }

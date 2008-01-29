@@ -29,12 +29,12 @@ import org.apache.commons.jxpath.ri.model.dynamic.DynamicPointer;
  */
 public class DynamicPointerEx extends DynamicPointer {
 
-	/**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = 5068434119249899985L;
-	
-	/**
+    /**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = 5068434119249899985L;
+    
+    /**
      * プロパティハンドラ。
      */
     private DynamicPropertyHandler handler;

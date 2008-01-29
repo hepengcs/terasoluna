@@ -32,11 +32,11 @@ import java.io.Serializable;
 public class DBMessage implements Serializable {
 
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = 299442236623116335L;
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = 299442236623116335L;
 
-	/**
+    /**
      * メッセージコード。
      */
     protected String code = null;

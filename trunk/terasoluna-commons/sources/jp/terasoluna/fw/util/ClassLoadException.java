@@ -28,12 +28,12 @@ package jp.terasoluna.fw.util;
  */
 public class ClassLoadException extends Exception {
 
-	/**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -7229283425927441452L;
+    /**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -7229283425927441452L;
 
-	/**
+    /**
      * コンストラクタ
      * 
      * @param cause ラップする例外

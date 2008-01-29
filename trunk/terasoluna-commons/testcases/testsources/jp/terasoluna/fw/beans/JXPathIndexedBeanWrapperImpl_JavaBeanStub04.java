@@ -141,21 +141,21 @@ public class JXPathIndexedBeanWrapperImpl_JavaBeanStub04 {
             this.hoge = hoge;
         }
 
-		/**
-		 * hogeArrayを取得する。
-		 * @return hogeArray
-		 */
-		public String[] getHogeArray() {
-			return hogeArray;
-		}
+        /**
+         * hogeArrayを取得する。
+         * @return hogeArray
+         */
+        public String[] getHogeArray() {
+            return hogeArray;
+        }
 
-		/**
-		 * hogeArrayを設定する。
-		 * @param hogeArray hogeArray
-		 */
-		public void setHogeArray(String[] hogeArray) {
-			this.hogeArray = hogeArray;
-		}
+        /**
+         * hogeArrayを設定する。
+         * @param hogeArray hogeArray
+         */
+        public void setHogeArray(String[] hogeArray) {
+            this.hogeArray = hogeArray;
+        }
 
     }
 

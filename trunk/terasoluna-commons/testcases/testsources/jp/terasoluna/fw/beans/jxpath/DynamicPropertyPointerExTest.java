@@ -101,7 +101,7 @@ public class DynamicPropertyPointerExTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testGetLength01() throws Exception {
+    public void testGetLength01() throws Exception {
         // 前処理
     	QName qName = new QName("name");
     	Map map = new HashMap();
@@ -138,7 +138,7 @@ public class DynamicPropertyPointerExTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testGetLength02() throws Exception {
+    public void testGetLength02() throws Exception {
         // 前処理
     	QName qName = new QName("name");
     	Map map = new HashMap();

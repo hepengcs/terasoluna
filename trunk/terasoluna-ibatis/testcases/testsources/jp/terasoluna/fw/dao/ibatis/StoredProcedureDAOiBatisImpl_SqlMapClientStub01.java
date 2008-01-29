@@ -32,7 +32,7 @@ import com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate;
  */
 public class StoredProcedureDAOiBatisImpl_SqlMapClientStub01 extends SqlMapClientImpl {
 
-	/*
+    /*
      * 呼び出し確認用変数
      */
     private boolean called = false;

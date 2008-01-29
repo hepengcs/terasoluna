@@ -19,23 +19,23 @@ package jp.terasoluna.fw.util;
 import java.io.Serializable;
 
 public class ProxyUtil_JavaBeanStub01 implements Serializable, ProxyUtil_IJavaBeanStub01 {
-	/**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -3029460937604647413L;
-	private String name = "";
+    /**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -3029460937604647413L;
+    private String name = "";
 
-	/* (非 Javadoc)
-	 * @see jp.terasoluna.fw.util.ProxyUtil_IJavaBeanStub01#getName()
-	 */
-	public String getName() {
-		return name;
-	}
+    /* (非 Javadoc)
+     * @see jp.terasoluna.fw.util.ProxyUtil_IJavaBeanStub01#getName()
+     */
+    public String getName() {
+        return name;
+    }
 
-	/* (非 Javadoc)
-	 * @see jp.terasoluna.fw.util.ProxyUtil_IJavaBeanStub01#setName(java.lang.String)
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    /* (非 Javadoc)
+     * @see jp.terasoluna.fw.util.ProxyUtil_IJavaBeanStub01#setName(java.lang.String)
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 }

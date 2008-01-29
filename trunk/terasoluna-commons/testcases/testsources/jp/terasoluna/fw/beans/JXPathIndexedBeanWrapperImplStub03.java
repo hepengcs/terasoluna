@@ -58,7 +58,7 @@ public class JXPathIndexedBeanWrapperImplStub03 extends
      * @return boolean trueを返す。 
      */
     @Override
-	protected boolean isMapProperty(String property) {
+    protected boolean isMapProperty(String property) {
         // 入力確認用メンバに格納。
         this.isMapPropertyParam1 = property;
         
@@ -73,7 +73,7 @@ public class JXPathIndexedBeanWrapperImplStub03 extends
      * @return String XPath。 
      */
     @Override
-	protected String escapeMapProperty(String property) {
+    protected String escapeMapProperty(String property) {
         // 動的に戻り値を作成。
         return property+"[@name='key']";
     }
@@ -84,7 +84,7 @@ public class JXPathIndexedBeanWrapperImplStub03 extends
      * @return 属性名。
      */
     @Override
-	protected String extractAttributeName(String property) {
+    protected String extractAttributeName(String property) {
         // 動的に戻り値を作成。
         return property+"Attribute";
     }
@@ -95,7 +95,7 @@ public class JXPathIndexedBeanWrapperImplStub03 extends
      * @return String XPath形式の添え字。 
      */
     @Override
-	protected String extractIncrementIndex(String property) {
+    protected String extractIncrementIndex(String property) {
         // 入力確認用メンバに格納。
         this.extractIncrementIndexParam1 = property;
         

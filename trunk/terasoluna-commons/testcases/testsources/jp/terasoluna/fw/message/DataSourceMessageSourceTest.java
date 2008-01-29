@@ -225,7 +225,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource01() throws Exception {
+    public void testReadMessageFromDataSource01() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -272,7 +272,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource02() throws Exception {
+    public void testReadMessageFromDataSource02() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -327,7 +327,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource03() throws Exception {
+    public void testReadMessageFromDataSource03() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -388,7 +388,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource04() throws Exception {
+    public void testReadMessageFromDataSource04() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -441,7 +441,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource05() throws Exception {
+    public void testReadMessageFromDataSource05() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -491,7 +491,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource06() throws Exception {
+    public void testReadMessageFromDataSource06() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -542,7 +542,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource07() throws Exception {
+    public void testReadMessageFromDataSource07() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -593,7 +593,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testReadMessageFromDataSource08() throws Exception {
+    public void testReadMessageFromDataSource08() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub02 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub02();
@@ -1013,7 +1013,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testInternalResolveCodeWithoutArguments01() throws Exception {
+    public void testInternalResolveCodeWithoutArguments01() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         ds.cachedMergedProperties = null;
@@ -1067,7 +1067,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      *             このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testInternalResolveCodeWithoutArguments02() throws Exception {
+    public void testInternalResolveCodeWithoutArguments02() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         
@@ -1128,7 +1128,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      *             このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testInternalResolveCodeWithoutArguments03() throws Exception {
+    public void testInternalResolveCodeWithoutArguments03() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
 
@@ -1189,7 +1189,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testInternalResolveCodeWithoutArguments04() throws Exception {
+    public void testInternalResolveCodeWithoutArguments04() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         
@@ -1239,7 +1239,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testInternalResolveCodeWithoutArguments05() throws Exception {
+    public void testInternalResolveCodeWithoutArguments05() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         
@@ -1483,7 +1483,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testResolveCode01() throws Exception {
+    public void testResolveCode01() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         String code = "code01";
@@ -1540,7 +1540,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testResolveCode02() throws Exception {
+    public void testResolveCode02() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         String code = "code01";
@@ -1603,7 +1603,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testResolveCode03() throws Exception {
+    public void testResolveCode03() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         String code = "code01";
@@ -1667,7 +1667,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testResolveCode04() throws Exception {
+    public void testResolveCode04() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         String code = "code01";
@@ -1719,7 +1719,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testResolveCode05() throws Exception {
+    public void testResolveCode05() throws Exception {
         // 前処理
         DataSourceMessageSource ds = new DataSourceMessageSource();
         String code = "code01";
@@ -1765,7 +1765,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testGetMessageFormat01() throws Exception {
+    public void testGetMessageFormat01() throws Exception {
         // 前処理
         DataSourceMessageSource ds 
                 = new DataSourceMessageSource();
@@ -1807,7 +1807,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testGetMessageFormat02() throws Exception {
+    public void testGetMessageFormat02() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub18 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub18();
@@ -1849,7 +1849,7 @@ public class DataSourceMessageSourceTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testGetMessageFormat03() throws Exception {
+    public void testGetMessageFormat03() throws Exception {
         // 前処理
         DataSourceMessageSource_DataSourceMessageSourceStub19 ds 
                 = new DataSourceMessageSource_DataSourceMessageSourceStub19();

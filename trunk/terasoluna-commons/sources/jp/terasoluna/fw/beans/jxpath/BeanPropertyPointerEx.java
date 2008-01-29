@@ -33,11 +33,11 @@ import org.apache.commons.jxpath.ri.model.beans.BeanPropertyPointer;
 public class BeanPropertyPointerEx extends BeanPropertyPointer {
 
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -4617365154553497991L;
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -4617365154553497991L;
 
-	/**
+    /**
      * コンストラクタ。
      * @param parent 親となるBeanポインタ
      * @param beanInfo ターゲットのBeanの情報

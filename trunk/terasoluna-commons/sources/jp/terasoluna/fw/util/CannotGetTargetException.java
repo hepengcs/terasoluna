@@ -24,11 +24,11 @@ package jp.terasoluna.fw.util;
 public class CannotGetTargetException extends RuntimeException {
 
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -4968143958715127949L;
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -4968143958715127949L;
 
-	/**
+    /**
      * コンストラクタ。
      *
      * @param cause 原因となった例外

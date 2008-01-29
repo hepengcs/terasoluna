@@ -31,12 +31,12 @@ import org.apache.commons.jxpath.util.ValueUtils;
  */
 public class DynamicPropertyPointerEx extends DynamicPropertyPointer {
 
-	/**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -2235777024563491060L;
+    /**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -2235777024563491060L;
 
-	/**
+    /**
      * コンストラクタ。
      * @param parent 親Map用ポインタ
      * @param handler プロパティハンドラ

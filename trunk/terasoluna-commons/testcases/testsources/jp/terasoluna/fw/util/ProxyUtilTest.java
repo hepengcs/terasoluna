@@ -127,8 +127,8 @@ public class ProxyUtilTest extends TestCase {
         // 前処理
     	ProxyFactory pf = new ProxyFactory(new ProxyUtil_JavaBeanStub01());
     	pf.setProxyTargetClass(true);
-		Object proxy = pf.getProxy();
-		assertTrue(AopUtils.isCglibProxy(proxy));
+        Object proxy = pf.getProxy();
+        assertTrue(AopUtils.isCglibProxy(proxy));
 
         // テスト実施
     	Class result = ProxyUtil.getTargetClass(proxy);
@@ -187,9 +187,9 @@ public class ProxyUtilTest extends TestCase {
     public void testGetTargetClass04() throws Exception {
     	// 前処理
     	ProxyFactory pf = new ProxyFactory(new ProxyUtil_JavaBeanStub01());
-		Object proxy = pf.getProxy();
+        Object proxy = pf.getProxy();
 
-		assertTrue(AopUtils.isJdkDynamicProxy(proxy));
+        assertTrue(AopUtils.isJdkDynamicProxy(proxy));
 
         // テスト実施
     	Class result = ProxyUtil.getTargetClass(proxy);
@@ -222,12 +222,12 @@ public class ProxyUtilTest extends TestCase {
     public void testGetTargetClass05() throws Exception {
         // 前処理
     	ProxyFactory parentPf = new ProxyFactory(new ProxyUtil_JavaBeanStub01());
-		Object parent = parentPf.getProxy();
-		
-		ProxyFactory pf = new ProxyFactory(parent);
-		Object proxy = pf.getProxy();
+        Object parent = parentPf.getProxy();
+        
+        ProxyFactory pf = new ProxyFactory(parent);
+        Object proxy = pf.getProxy();
 
-		assertTrue(AopUtils.isJdkDynamicProxy(proxy));
+        assertTrue(AopUtils.isJdkDynamicProxy(proxy));
 
         // テスト実施
     	Class result = ProxyUtil.getTargetClass(proxy);

@@ -11,7 +11,7 @@
 	<classpathentry kind="lib" path="/terasoluna-lib/lib/terasoluna-utlib-spring.jar"/>
 	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-logging-1.1.jar"/>
 	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-pool-1.3.jar"/>
-	<classpathentry kind="lib" path="/terasoluna-lib/lib/ibatis-2.3.0.677.jar" sourcepath="C:/Documents and Settings/bs-yousuke/デスクトップ/ibatis-src.zip"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/ibatis-2.3.0.677.jar"/>
 	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-dbcp-1.2.2.jar"/>
 	<classpathentry kind="lib" path="/terasoluna-lib/lib/junit-3.8.2.jar"/>
 	<classpathentry kind="output" path="classes"/>

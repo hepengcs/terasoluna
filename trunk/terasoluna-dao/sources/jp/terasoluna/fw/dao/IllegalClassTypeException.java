@@ -28,11 +28,11 @@ import org.springframework.dao.DataAccessException;
 public class IllegalClassTypeException extends DataAccessException {
 
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -3147888263699426883L;
-	
-	/**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -3147888263699426883L;
+    
+    /**
      * エラーメッセージ
      */
     public static final String ERROR_ILLEGAL_CLASS_TYPE

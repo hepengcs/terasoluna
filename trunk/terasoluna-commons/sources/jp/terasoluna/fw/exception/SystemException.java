@@ -36,11 +36,11 @@ package jp.terasoluna.fw.exception;
 public class SystemException extends RuntimeException {
 
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -3348737638719112576L;
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -3348737638719112576L;
 
-	/**
+    /**
      * エラーコード。
      */
     private String errorCode = null;

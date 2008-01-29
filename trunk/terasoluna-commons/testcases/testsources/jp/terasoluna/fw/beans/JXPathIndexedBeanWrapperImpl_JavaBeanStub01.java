@@ -198,21 +198,21 @@ public class JXPathIndexedBeanWrapperImpl_JavaBeanStub01 {
         this.property5 = property5;
     }
 
-	/**
-	 * objectArrayを取得する。
-	 * @return objectArray objectArray
-	 */
-	public Object[] getObjectArray() {
-		return objectArray;
-	}
+    /**
+     * objectArrayを取得する。
+     * @return objectArray objectArray
+     */
+    public Object[] getObjectArray() {
+        return objectArray;
+    }
 
-	
-	/**
-	 * objectArrayを設定する。
-	 * @param objectArray
-	 */
-	public void setObjectArray(Object[] objectArray) {
-		this.objectArray = objectArray;
-	}
+    
+    /**
+     * objectArrayを設定する。
+     * @param objectArray
+     */
+    public void setObjectArray(Object[] objectArray) {
+        this.objectArray = objectArray;
+    }
 
 }

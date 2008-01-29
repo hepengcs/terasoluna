@@ -29,33 +29,33 @@ import org.springframework.beans.propertyeditors.CustomDateEditor;
  *
  */
 public class DatePropertyEditorRegistrar 
-	implements PropertyEditorRegistrar {
-	
-	/**
-	 * このプロパティエディタが使用する日付フォーマット。
-	 */
-	private DateFormat dateFormat = DEFAULT_DATE_FORMAT;
-	
-	/**
-	 * デフォルトの日付フォーマット。YYYY/MM/DD形式。
-	 */
-	private static final DateFormat DEFAULT_DATE_FORMAT 
-		= new SimpleDateFormat("yyyy/MM/dd");
+    implements PropertyEditorRegistrar {
+    
+    /**
+     * このプロパティエディタが使用する日付フォーマット。
+     */
+    private DateFormat dateFormat = DEFAULT_DATE_FORMAT;
+    
+    /**
+     * デフォルトの日付フォーマット。YYYY/MM/DD形式。
+     */
+    private static final DateFormat DEFAULT_DATE_FORMAT 
+        = new SimpleDateFormat("yyyy/MM/dd");
 
-	/**
-	 * 日付フォーマットを設定する。
-	 * @param dateFormat 日付フォーマット
-	 */
-	public void setDateFormat(DateFormat dateFormat) {
-		this.dateFormat = dateFormat;
-	}
-	
-	/**
-	 * カスタムプロパティエディタを生成する。
-	 * @param registry プロパティエディタを保持するオブジェクト
-	 */
-	public void registerCustomEditors(PropertyEditorRegistry registry) {
-		registry.registerCustomEditor(Date.class, 
-				new CustomDateEditor(dateFormat, false));
-	}
+    /**
+     * 日付フォーマットを設定する。
+     * @param dateFormat 日付フォーマット
+     */
+    public void setDateFormat(DateFormat dateFormat) {
+        this.dateFormat = dateFormat;
+    }
+    
+    /**
+     * カスタムプロパティエディタを生成する。
+     * @param registry プロパティエディタを保持するオブジェクト
+     */
+    public void registerCustomEditors(PropertyEditorRegistry registry) {
+        registry.registerCustomEditor(Date.class, 
+                new CustomDateEditor(dateFormat, false));
+    }
 }

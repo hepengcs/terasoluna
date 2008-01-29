@@ -341,7 +341,7 @@ public class DBMessageResourceDAOImpl extends JdbcDaoSupport implements
      * @return メッセージリソースのリスト
      */
     @SuppressWarnings("unchecked")
-	public List<DBMessage> findDBMessages() {
+    public List<DBMessage> findDBMessages() {
         // JDBCDaoSupportにてDBMessageQueryが必ず生成されるため、
         // nullにはならない。
         return dBMessageQuery.execute();

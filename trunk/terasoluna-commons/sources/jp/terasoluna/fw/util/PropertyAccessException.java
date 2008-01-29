@@ -28,12 +28,12 @@ package jp.terasoluna.fw.util;
  */
 public class PropertyAccessException extends Exception {
 
-	/**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = 8897187203080288449L;
+    /**
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = 8897187203080288449L;
 
-	/**
+    /**
      * コンストラクタ
      * 
      * @param cause ラップする例外

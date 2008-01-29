@@ -1062,7 +1062,7 @@ public class DBMessageResourceDAOImplTest extends TestCase {
      * @throws Exception このメソッドで発生した例外
      */
     @SuppressWarnings("unchecked")
-	public void testFindDBMessages01() throws Exception {
+    public void testFindDBMessages01() throws Exception {
         // 前処理
         DataSource ds = new MockDataSource();
         DBMessageResourceDAOImpl_DBMessageQueryStub01 query

@@ -136,7 +136,7 @@ public class DatePropertyEditorRegistrarTest extends TestCase {
     public void testRegisterCustomEditors01() throws Exception {
         // ëOèàóù
     	DatePropertyEditorRegistrar registrar
-			= new DatePropertyEditorRegistrar();
+            = new DatePropertyEditorRegistrar();
     	PropertyEditorRegistrar_PropertyEditorRegistryStub01 registry
     		= new PropertyEditorRegistrar_PropertyEditorRegistryStub01();
 

@@ -58,8 +58,9 @@
   	<mkdir dir="${dist.dir}"/>
   	<jar destfile="${dist.dir}/${ant.project.name}.jar">
       <manifest>
-        <attribute name="Built-By" value="${user.name}"/>
-        <attribute name="Implementation-Title" value="TERASOLUNA Framework for Spring"/>
+        <!-- attribute name="Built-By" value="${user.name}"/ -->
+        <attribute name="Extension-Name" value="${ant.project.name}" />
+        <attribute name="Implementation-Title" value="TERASOLUNA Framework for Java"/>
         <attribute name="Implementation-Version" value="${terasoluna.version} ${TODAY}"/> 
         <attribute name="Implementation-Vendor" value="NTT DATA Corporation."/>
       </manifest>
@@ -73,12 +74,12 @@
 	      　ソースコードを圧縮したZipファイルを作成する         
        ================================= -->
   <target name="createSourceZip">
-  	<delete file="${dist.dir}/${ant.project.name}-src.zip"/>
+  	<delete file="${dist.dir}/${ant.project.name}-src_${terasoluna.version}.zip"/>
   	<mkdir dir="${dist.dir}"/>
-  	<zip destfile="${dist.dir}/${ant.project.name}-src.zip"
+  	<zip destfile="${dist.dir}/${ant.project.name}-src_${terasoluna.version}.zip"
         basedir="${source.dir}" />
   	<copy todir="${terasoluna.lib.home}/src" 
-  	  		file="${dist.dir}/${ant.project.name}-src.zip"/>
+  	  		file="${dist.dir}/${ant.project.name}-src_${terasoluna.version}.zip"/>
   </target>
 	
   <!-- =================================
@@ -96,12 +97,29 @@
         packagenames="**/*">
     </javadoc>
   </target>
+
+  <!-- =================================
+	      　JavaDoc圧縮したZipファイルを作成する
+       ================================= -->
+  <target name="createJavaDocZip" depends="createJavaDoc">
+  	<delete file="${terasoluna.lib.home}/doc/${ant.project.name}-javadoc_${terasoluna.version}.zip"/>
+  	<mkdir dir="${terasoluna.lib.home}/doc/"/>
+  	<zip destfile="${terasoluna.lib.home}/doc/${ant.project.name}-javadoc_${terasoluna.version}.zip"
+        basedir="${basedir}/doc/javadoc/" />
+  	<delete failonerror="false">
+  	  <fileset dir="${basedir}/doc/javadoc">
+	    <include name="**/*" />
+      </fileset>
+    </delete>
+  	<delete dir="${basedir}/doc/javadoc"/>
+  	<delete dir="${basedir}/doc"/>
+  </target>	
 	
   <!-- ================================= 
         このプロジェクトをZipファイルにしてdistフォルダに格納する。          
        ================================= -->
   <target name="zip">
-  	<delete file="${dist.dir}/${ant.project.name}-${terasoluna.version}.zip"/>
+  	<delete file="${dist.dir}/${ant.project.name}_${terasoluna.version}.zip"/>
   	<mkdir dir="${dist.dir}"/>
    	<zip destfile="${dist.dir}/${ant.project.name}.zip">
 	  <fileset dir="${basedir}/..">
@@ -111,9 +129,11 @@
 	  	<include name="${ant.project.name}/ant/**/*"/>
 	  	<include name="${ant.project.name}/testcases/testsources/**/*"/>
 	  	<include name="${ant.project.name}/LICENSE.txt"/>
+	  	<exclude name="${ant.project.name}/ant/jensitybuild.*"/>
+	  	<exclude name="${ant.project.name}/ant/testbuild.*"/>
 	  </fileset>
     </zip>
-  	<rename dest="${dist.dir}/${ant.project.name}-${terasoluna.version}.zip" 
+  	<rename dest="${dist.dir}/${ant.project.name}_${terasoluna.version}.zip" 
   		src="${dist.dir}/${ant.project.name}.zip"/>
   </target>
 </project>

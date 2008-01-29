@@ -51,7 +51,7 @@ public class JXPathIndexedBeanWrapperImplStub01 extends
      * @return String XPath。 
      */
     @Override
-	protected String extractMapPropertyName(String property) {
+    protected String extractMapPropertyName(String property) {
         // 動的に戻り値を作成。
         return property + "Name";
     }
@@ -62,7 +62,7 @@ public class JXPathIndexedBeanWrapperImplStub01 extends
      * @return String XPath。 
      */
     @Override
-	protected String extractMapPropertyKey(String property) {
+    protected String extractMapPropertyKey(String property) {
         // 動的に戻り値を作成。
         return property + "Key";
     }
@@ -74,7 +74,7 @@ public class JXPathIndexedBeanWrapperImplStub01 extends
      * @return 配列インデックス。
      */
     @Override
-	protected String extractIndex(String property) {
+    protected String extractIndex(String property) {
         // 入力確認用メンバに格納。
         this.extractIndexParam1 = property;
         

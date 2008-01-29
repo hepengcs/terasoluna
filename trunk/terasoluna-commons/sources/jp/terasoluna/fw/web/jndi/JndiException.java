@@ -34,11 +34,11 @@ package jp.terasoluna.fw.web.jndi;
 public class JndiException extends RuntimeException {
     
     /**
-	 * シリアルバージョンID。
-	 */
-	private static final long serialVersionUID = -7105599934896030074L;
+     * シリアルバージョンID。
+     */
+    private static final long serialVersionUID = -7105599934896030074L;
 
-	/**
+    /**
      * コンストラクタ。
      *
      * @param cause 原因となった例外

@@ -24,44 +24,44 @@ import java.util.List;
  * JavaBeanのスタブ。
  */
 public class BeanPropertyPointerEx_JavaBeanStub01 implements Serializable {
-	
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 3092857648272149366L;
-	
-	private String property = "";
-	private List listProperty = new ArrayList();
+    
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 3092857648272149366L;
+    
+    private String property = "";
+    private List listProperty = new ArrayList();
 
-	/**
-	 * propertyを取得する。
-	 * @return property
-	 */
-	public String getProperty() {
-		return property;
-	}
+    /**
+     * propertyを取得する。
+     * @return property
+     */
+    public String getProperty() {
+        return property;
+    }
 
-	/**
-	 * propertyを設定する。
-	 * @param property
-	 */
-	public void setProperty(String property) {
-		this.property = property;
-	}
+    /**
+     * propertyを設定する。
+     * @param property
+     */
+    public void setProperty(String property) {
+        this.property = property;
+    }
 
-	/**
-	 * listPropertyを取得する。
-	 * @return listProperty
-	 */
-	public List getListProperty() {
-		return listProperty;
-	}
+    /**
+     * listPropertyを取得する。
+     * @return listProperty
+     */
+    public List getListProperty() {
+        return listProperty;
+    }
 
-	/**
-	 * listPropertyを設定する。
-	 * @param listProperty
-	 */
-	public void setListProperty(List listProperty) {
-		this.listProperty = listProperty;
-	}
+    /**
+     * listPropertyを設定する。
+     * @param listProperty
+     */
+    public void setListProperty(List listProperty) {
+        this.listProperty = listProperty;
+    }
 }
