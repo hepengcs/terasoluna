@@ -32,11 +32,11 @@ import org.apache.struts.config.ExceptionConfig;
 public class ExceptionConfigEx extends ExceptionConfig {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -1181268336500823437L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -1181268336500823437L;
 
-	/**
+    /**
      * モジュール名。
      */
     private String module;

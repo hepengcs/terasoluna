@@ -53,11 +53,11 @@ import org.apache.struts.util.MessageResourcesFactory;
 public class PropertyMessageResourcesExFactory extends MessageResourcesFactory {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 2857185835853238603L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 2857185835853238603L;
 
-	/**
+    /**
      *  新規に <code>PropertyMessageResourcesEx</code> を生成する。
      *
      * @param config リクエストバンドルに対する設定パラメータ

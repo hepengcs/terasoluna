@@ -96,15 +96,15 @@ import org.apache.struts.util.MessageResourcesFactory;
 public final class GlobalMessageResources extends MessageResources {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -1224092114113256826L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -1224092114113256826L;
 
-	/**
+    /**
      * ログクラス。
      */
     @SuppressWarnings("hiding")
-	private static Log log
+    private static Log log
         = LogFactory.getLog(GlobalMessageResources.class);
 
     /**

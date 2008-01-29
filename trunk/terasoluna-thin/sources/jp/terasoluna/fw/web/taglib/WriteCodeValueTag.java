@@ -139,11 +139,11 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 public class WriteCodeValueTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8199383777405058816L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8199383777405058816L;
 
-	/**
+    /**
      * ログクラス。
      */
      private static Log log =
@@ -277,7 +277,7 @@ public class WriteCodeValueTag extends TagSupport {
                 throw new JspTagException("Cannot get property[" + name + "."
                         + property + "].");
             }
-			codeKey = bean.toString();
+            codeKey = bean.toString();
         } else {
             codeKey = key;
         }

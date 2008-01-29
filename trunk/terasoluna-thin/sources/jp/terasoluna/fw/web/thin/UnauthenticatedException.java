@@ -50,9 +50,9 @@ import javax.servlet.ServletException;
  */
 public class UnauthenticatedException extends ServletException {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8581556608555574183L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8581556608555574183L;
 
 }

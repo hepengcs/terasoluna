@@ -85,11 +85,11 @@ import java.util.Date;
 public class DateTag extends DateFormatterTagBase {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -9087010541359988539L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -9087010541359988539L;
 
-	/**
+    /**
      * <code>pattern</code> 属性で指定された <code>SimpleDateFormat</code>
      * 形式のフォーマットに従って、指定された日付時刻データをフォーマットする。
      *

@@ -107,11 +107,11 @@ import org.apache.struts.action.ActionMessages;
 public class ErrorsTag extends org.apache.struts.taglib.html.ErrorsTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -1764868652464908717L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -1764868652464908717L;
 
-	/**
+    /**
      * ポップアップ画面で、セッションに格納されているエラー情報を
      * リクエストに移動し、エラー情報の表示処理を行う。
      *

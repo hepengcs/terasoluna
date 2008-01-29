@@ -17,23 +17,23 @@
 package jp.terasoluna.fw.web.thin;
 
 public class AuthorizationControlFilter_AuthorizationControlFilterStub01 extends AuthorizationControlFilter{
-	/**
-	 * getController()が返す値。
-	 */
-	public AuthorizationController newController = null;	
-	/**
-	 * getController()が呼ばれたことを表すフラグ。
-	 */	
-	public boolean isCalled = false;
-	
-	/**
-	 * getController():
-	 * AuthorizationControlFilter_AuthorizationControlFilterStub01インスタンス
-	 */
-	@Override	
-	protected AuthorizationController getController() {
-		isCalled = true;
-		return newController ;
-	}
-	
+    /**
+     * getController()が返す値。
+     */
+    public AuthorizationController newController = null;	
+    /**
+     * getController()が呼ばれたことを表すフラグ。
+     */	
+    public boolean isCalled = false;
+    
+    /**
+     * getController():
+     * AuthorizationControlFilter_AuthorizationControlFilterStub01インスタンス
+     */
+    @Override	
+    protected AuthorizationController getController() {
+        isCalled = true;
+        return newController ;
+    }
+    
 }

@@ -180,11 +180,11 @@ import org.apache.commons.logging.LogFactory;
 public class BodyTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -3249997220773531400L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -3249997220773531400L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log = LogFactory.getLog(BodyTag.class);

@@ -36,7 +36,7 @@ public class FieldChecksEx_HttpServletRequestImpl01
         if (session == null && create) {
             return new MockHttpSession();
         }
-		return super.getSession();
+        return super.getSession();
     }
 
 }

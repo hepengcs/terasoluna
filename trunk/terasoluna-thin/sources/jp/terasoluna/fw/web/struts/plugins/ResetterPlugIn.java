@@ -316,8 +316,8 @@ public class ResetterPlugIn implements PlugIn {
      * @return 公開識別子
      */
     public String getPublicIdentifier() {
-		return publicIdentifier;
-	}
+        return publicIdentifier;
+    }
 
     /**
      * DTDのURLを返却する。
@@ -325,10 +325,10 @@ public class ResetterPlugIn implements PlugIn {
      * @return DTDのURL
      */
     public String getDtdUrl(){
-	    return dtdUrl;
+        return dtdUrl;
     }
 
-	/**
+    /**
      * Struts設定ファイル(struts-config.xml)
      * に設定されているリセッタの完全修飾名を
      * 設定する。
@@ -364,16 +364,16 @@ public class ResetterPlugIn implements PlugIn {
      * 公開識別子を設定する。
      * @param publicIdentifier 公開識別子
      */
-	public void setPublicIdentifier(String publicIdentifier) {
-		this.publicIdentifier = publicIdentifier;
-	}
+    public void setPublicIdentifier(String publicIdentifier) {
+        this.publicIdentifier = publicIdentifier;
+    }
 
     /**
      * DTDのURLを設定する。
      * @param dtdUrl DTDのURL
      */
-	public void setDtdUrl(String dtdUrl) {
-		this.dtdUrl = dtdUrl;
-	}
+    public void setDtdUrl(String dtdUrl) {
+        this.dtdUrl = dtdUrl;
+    }
 
 }

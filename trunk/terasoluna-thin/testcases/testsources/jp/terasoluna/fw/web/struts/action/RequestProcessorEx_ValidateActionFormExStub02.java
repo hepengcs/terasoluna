@@ -33,11 +33,11 @@ public class RequestProcessorEx_ValidateActionFormExStub02
 
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -5174567398578535928L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -5174567398578535928L;
 
-	/**
+    /**
      * 会社ID
      */
     private String companyId = null;

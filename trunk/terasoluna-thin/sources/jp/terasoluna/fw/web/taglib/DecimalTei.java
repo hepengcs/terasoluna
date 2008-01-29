@@ -51,7 +51,7 @@ public class DecimalTei extends TagExtraInfo {
                                     true,
                                     VariableInfo.AT_BEGIN)};
         }
-		return new VariableInfo [] {};
+        return new VariableInfo [] {};
     }
 
 }

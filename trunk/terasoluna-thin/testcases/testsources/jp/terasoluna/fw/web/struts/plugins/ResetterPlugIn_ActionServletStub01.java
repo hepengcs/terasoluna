@@ -30,11 +30,11 @@ import jp.terasoluna.utlib.MockServletContext;
  */
 public class ResetterPlugIn_ActionServletStub01 extends ActionServlet {
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 3430213237718964015L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 3430213237718964015L;
 
-	private ServletContext ctx = new MockServletContext();
+    private ServletContext ctx = new MockServletContext();
 
     /**
      * サーブレットコンテキストを返却する。

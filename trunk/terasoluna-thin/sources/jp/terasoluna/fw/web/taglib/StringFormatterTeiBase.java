@@ -53,6 +53,6 @@ public abstract class StringFormatterTeiBase extends TagExtraInfo {
                                     true,
                                     VariableInfo.AT_BEGIN)};
         }
-		return new VariableInfo [] {};
+        return new VariableInfo [] {};
     }
 }

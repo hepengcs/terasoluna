@@ -105,11 +105,11 @@ public class DynaValidatorActionFormEx
     implements FormEx {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -8958002981280692562L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -8958002981280692562L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log =
@@ -278,7 +278,7 @@ public class DynaValidatorActionFormEx
      * @param value セット対象のフィールド値
      */
     @SuppressWarnings("unchecked")
-	@Override
+    @Override
     public void set(String name, int index, Object value) {
 
         if (log.isDebugEnabled()) {

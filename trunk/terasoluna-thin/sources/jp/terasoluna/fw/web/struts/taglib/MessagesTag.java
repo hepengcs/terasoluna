@@ -151,11 +151,11 @@ import org.apache.struts.action.ActionMessages;
 public class MessagesTag extends org.apache.struts.taglib.html.MessagesTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 1811855638381884729L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 1811855638381884729L;
 
-	/**
+    /**
      * ポップアップ画面で、セッションに格納されているメッセージ情報を
      * リクエストに移動し、メッセージ情報の表示処理を行う。
      *

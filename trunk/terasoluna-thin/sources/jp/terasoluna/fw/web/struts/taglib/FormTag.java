@@ -53,11 +53,11 @@ import org.apache.struts.taglib.TagUtils;
 public class FormTag extends org.apache.struts.taglib.html.FormTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 5890474956835784840L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 5890474956835784840L;
 
-	/**
+    /**
      * キャッシュ避け用ランダムIDのパラメータ名。
      */
     private static final String RANDOM_ID_KEY = RandomUtil.RANDOM_ID_KEY;

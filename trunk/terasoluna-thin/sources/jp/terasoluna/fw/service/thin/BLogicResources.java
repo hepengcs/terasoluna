@@ -48,11 +48,11 @@ import java.util.Map;
 public class BLogicResources implements Serializable {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 4787121961877175389L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 4787121961877175389L;
 
-	/**
+    /**
      * このクラスのインスタンスをサーブレットコンテキストに保存
      * する際のキーのプレフィックス値。
      */

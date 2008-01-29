@@ -202,11 +202,11 @@ import jp.terasoluna.fw.util.StringUtil;
 public class DecimalTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -2317420257734211793L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -2317420257734211793L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log = LogFactory.getLog(DecimalTag.class);
@@ -490,7 +490,7 @@ public class DecimalTag extends TagSupport {
             if ("".equals(trimed)) {
                 return SKIP_BODY;  //  何も出力しない
             }
-			bd = new BigDecimal(trimed);
+            bd = new BigDecimal(trimed);
         } else if (value instanceof BigDecimal) {
             bd = (BigDecimal) value;
         } else {

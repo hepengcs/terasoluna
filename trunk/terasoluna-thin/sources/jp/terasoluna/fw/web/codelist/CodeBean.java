@@ -25,11 +25,11 @@ import java.io.Serializable;
 public class CodeBean implements Serializable {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -6727581752645857389L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -6727581752645857389L;
 
-	/**
+    /**
      * idを表すフィールド値。
      */
     private String id = "";

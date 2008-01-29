@@ -24,9 +24,9 @@ import org.apache.struts.action.ActionForm;
  */
 public class ClearSessionAction_ActionFormStub01 extends ActionForm {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -7256632405919963505L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -7256632405919963505L;
 
 }

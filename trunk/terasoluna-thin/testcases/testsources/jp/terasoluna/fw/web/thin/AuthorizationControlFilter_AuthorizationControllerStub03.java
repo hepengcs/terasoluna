@@ -19,13 +19,13 @@ package jp.terasoluna.fw.web.thin;
 import javax.servlet.ServletRequest;
 
 public class AuthorizationControlFilter_AuthorizationControllerStub03 
-		implements AuthorizationController {
+        implements AuthorizationController {
 
-	public boolean isAuthorized(String pathInfo, ServletRequest req) {
-		return true;
-	}
+    public boolean isAuthorized(String pathInfo, ServletRequest req) {
+        return true;
+    }
 
-	public boolean isCheckRequired(ServletRequest req) {
-		return true;
-	}
+    public boolean isCheckRequired(ServletRequest req) {
+        return true;
+    }
 }

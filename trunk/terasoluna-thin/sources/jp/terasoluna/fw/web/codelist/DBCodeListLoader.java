@@ -195,7 +195,7 @@ public class DBCodeListLoader implements ReloadableCodeListLoader {
      * dataSourceと指定されたSQL文を元にコードリストを生成する。
      */
     @SuppressWarnings("unchecked")
-	protected void loadCodeList() {
+    protected void loadCodeList() {
         if (log.isDebugEnabled()) {
             log.debug("loadCodeList() called.");
         }
@@ -249,20 +249,20 @@ public class DBCodeListLoader implements ReloadableCodeListLoader {
         this.dataSource = dataSource;
     }
 
-	/**
-	 * コードリストを取得するSQLを取得する。
-	 * @return SQL文
-	 */
+    /**
+     * コードリストを取得するSQLを取得する。
+     * @return SQL文
+     */
     public String getSql() {
-		return sql;
-	}
+        return sql;
+    }
 
-	/**
-	 * コードリストを取得するSQLを設定する。
-	 * @param sql SQL文
-	 */
+    /**
+     * コードリストを取得するSQLを設定する。
+     * @param sql SQL文
+     */
     public void setSql(String sql) {
-		this.sql = sql;
-	}
+        this.sql = sql;
+    }
 
 }

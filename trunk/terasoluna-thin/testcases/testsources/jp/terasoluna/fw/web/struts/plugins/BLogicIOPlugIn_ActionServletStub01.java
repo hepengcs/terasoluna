@@ -29,11 +29,11 @@ public class BLogicIOPlugIn_ActionServletStub01
         extends ActionServlet {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -2391654312205591109L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -2391654312205591109L;
 
-	/**
+    /**
      * サーブレットコンテキストスタブ。
      * ルールファイルで指定されたリソースを保持する。
      */

@@ -197,11 +197,11 @@ import org.apache.commons.logging.LogFactory;
 public class WriteTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -6953813130272994790L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -6953813130272994790L;
 
-	/**
+    /**
      * ログクラス
      */
     private static Log log = LogFactory.getLog(WriteTag.class);

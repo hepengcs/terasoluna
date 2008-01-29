@@ -126,7 +126,7 @@ public class MessageResourcesDAOImpl implements MessageResourcesDAO {
      * @return キーにメッセージキー、値にメッセージ文言の入ったMap
      */
     @SuppressWarnings("unchecked")
-	public Map<String, String> queryMessageMap(String sql) {
+    public Map<String, String> queryMessageMap(String sql) {
         
         if (log.isDebugEnabled()) {
             log.debug("call queryMessageMap()");

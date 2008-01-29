@@ -29,11 +29,11 @@ public class HttpSessionListenerImpl_HttpSessionEventStub01 extends
         HttpSessionEvent {
     
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -9058658477974930574L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -9058658477974930574L;
 
-	public MockHttpSession session = new MockHttpSession();
+    public MockHttpSession session = new MockHttpSession();
 
     @Override
     public HttpSession getSession() {

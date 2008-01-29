@@ -31,11 +31,11 @@ public class DynaValidatorActionFormEx_ActionServletStub01
     extends ActionServlet {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -3815501252468515570L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -3815501252468515570L;
 
-	private ServletContext servletContext = new MockServletContext();
+    private ServletContext servletContext = new MockServletContext();
 
     /**
      * servletContextを設定する。

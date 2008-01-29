@@ -18,12 +18,12 @@ package jp.terasoluna.fw.web;
 
 public class UserValueObjectImpl01 extends UserValueObject{
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -8802912426983662043L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -8802912426983662043L;
 
-	public UserValueObjectImpl01(){
-	}
-	
+    public UserValueObjectImpl01(){
+    }
+    
 }

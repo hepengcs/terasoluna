@@ -63,11 +63,11 @@ import org.apache.struts.action.ActionMapping;
 public class ActionMappingEx extends ActionMapping {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -7859832817953363932L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -7859832817953363932L;
 
-	/**
+    /**
      * アクションフォームを強制的に新規作成するかどうか。
      * デフォルトはfalse（既存があれば再利用）。
      */

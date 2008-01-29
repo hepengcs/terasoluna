@@ -26,10 +26,10 @@ import jp.terasoluna.fw.web.codelist.CodeListLoader;
 public class DefineCodeListTag_CodeListLoaderStub01
 implements CodeListLoader{
 
-		public void load() {
-		}
+        public void load() {
+        }
 
-		public CodeBean[] getCodeBeans() {
-				return null;
-		}
+        public CodeBean[] getCodeBeans() {
+                return null;
+        }
 }

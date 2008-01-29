@@ -61,11 +61,11 @@ import org.apache.struts.taglib.logic.IterateTag;
 public class LinkTag extends org.apache.struts.taglib.html.LinkTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -2143604832271336809L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -2143604832271336809L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log = LogFactory.getLog(LinkTag.class);

@@ -29,10 +29,10 @@ import javax.servlet.http.HttpServletResponse;
  * 
  */
 public class ExtensionFilter_ServletResponseStub01 implements
-		HttpServletResponse {
+        HttpServletResponse {
 
     @SuppressWarnings("unused")
-	private int errorCode = -1;
+    private int errorCode = -1;
     
     public ExtensionFilter_ServletResponseStub01() {
         super();
@@ -55,12 +55,12 @@ public class ExtensionFilter_ServletResponseStub01 implements
     }
 
     @SuppressWarnings("deprecation")
-	public String encodeUrl(String arg0) {
+    public String encodeUrl(String arg0) {
         return null;
     }
 
     @SuppressWarnings("deprecation")
-	public String encodeRedirectUrl(String arg0) {
+    public String encodeRedirectUrl(String arg0) {
         return null;
     }
 
@@ -106,7 +106,7 @@ public class ExtensionFilter_ServletResponseStub01 implements
     }
 
     @SuppressWarnings("deprecation")
-	public void setStatus(int arg0, String arg1) {
+    public void setStatus(int arg0, String arg1) {
 
     }
 

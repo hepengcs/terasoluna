@@ -698,11 +698,11 @@ import org.apache.struts.taglib.TagUtils;
 public class PageLinksTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 9017738370826462823L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 9017738370826462823L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log =

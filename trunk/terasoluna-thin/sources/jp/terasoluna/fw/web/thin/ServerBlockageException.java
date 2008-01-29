@@ -49,8 +49,8 @@ import javax.servlet.ServletException;
  */
 public class ServerBlockageException extends ServletException {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -3311976557292798334L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -3311976557292798334L;
 }

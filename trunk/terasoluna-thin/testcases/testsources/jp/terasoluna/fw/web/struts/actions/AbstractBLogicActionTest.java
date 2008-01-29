@@ -258,8 +258,8 @@ public class AbstractBLogicActionTest extends TestCase {
         // ActionEx
         ActionForm form = 
         	new ActionForm(){
-			    private static final long serialVersionUID = 1L;
-	        };
+                private static final long serialVersionUID = 1L;
+            };
 
         // request, response
         MockHttpServletRequest req = new MockHttpServletRequest();

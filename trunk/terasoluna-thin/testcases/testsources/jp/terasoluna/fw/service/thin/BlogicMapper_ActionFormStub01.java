@@ -25,48 +25,48 @@ import org.apache.struts.action.ActionForm;
  */
 @SuppressWarnings("serial")
 public class BlogicMapper_ActionFormStub01 extends ActionForm {
-	
-	/**
-	 * ダミープロパティparam1。
-	 */
-	private String param1 = null;
-	
-	/**
-	 * ダミープロパティparam3。
-	 */
-	private Map param3 = null;
-	
-	/**
-	 * param1を取得する。
-	 * @return param1
-	 */
-	public String getParam1() {
-		return param1;
-	}
-	
-	/**
-	 * param1を設定する。
-	 * @param param1 param1
-	 */
-	public void setParam1(String param1) {
-		this.param1 = param1;
-	}
-	
-	/**
-	 * param3を取得する。
-	 * @return param3
-	 */
-	public Map getParam3() {
-		return param3;
-	}
-	
-	/**
-	 * param3を設定する。
-	 * @param param3 param3
-	 */
-	public void setParam3(Map param3) {
-		this.param3 = param3;
-	}
-	
+    
+    /**
+     * ダミープロパティparam1。
+     */
+    private String param1 = null;
+    
+    /**
+     * ダミープロパティparam3。
+     */
+    private Map param3 = null;
+    
+    /**
+     * param1を取得する。
+     * @return param1
+     */
+    public String getParam1() {
+        return param1;
+    }
+    
+    /**
+     * param1を設定する。
+     * @param param1 param1
+     */
+    public void setParam1(String param1) {
+        this.param1 = param1;
+    }
+    
+    /**
+     * param3を取得する。
+     * @return param3
+     */
+    public Map getParam3() {
+        return param3;
+    }
+    
+    /**
+     * param3を設定する。
+     * @param param3 param3
+     */
+    public void setParam3(Map param3) {
+        this.param3 = param3;
+    }
+    
 
 }

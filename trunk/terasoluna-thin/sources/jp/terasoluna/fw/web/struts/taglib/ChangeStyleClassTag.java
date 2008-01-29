@@ -94,11 +94,11 @@ import org.apache.struts.action.ActionMessages;
 public class ChangeStyleClassTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8969715040525132492L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8969715040525132492L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log = LogFactory.getLog(ChangeStyleClassTag.class);

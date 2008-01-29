@@ -93,11 +93,11 @@ import jp.terasoluna.fw.web.thin.AuthorizationController;
 public class IfAuthorizedTag extends TagSupport {
     
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -4929834014631292954L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -4929834014631292954L;
 
-	/**
+    /**
      * パス名。
      */
     private String path = null;
@@ -155,8 +155,8 @@ public class IfAuthorizedTag extends TagSupport {
             // アクセス権限があるときはボディ評価
             return EVAL_BODY_INCLUDE;
         }
-		// 権限がないときはボディ評価をスキップ
-		return SKIP_BODY;
+        // 権限がないときはボディ評価をスキップ
+        return SKIP_BODY;
     }
 
     /**

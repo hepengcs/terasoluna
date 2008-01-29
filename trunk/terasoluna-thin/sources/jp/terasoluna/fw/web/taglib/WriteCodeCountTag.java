@@ -102,11 +102,11 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 public class WriteCodeCountTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -2318799214314166540L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -2318799214314166540L;
 
-	/**
+    /**
      * ログクラス。
      */
      private static Log log =

@@ -104,11 +104,11 @@ package jp.terasoluna.fw.web.taglib;
 public class LeftTag extends StringFormatterTagBase {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 220591418239073704L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 220591418239073704L;
 
-	/**
+    /**
      * 切り出す文字列の長さ。
      *
      */

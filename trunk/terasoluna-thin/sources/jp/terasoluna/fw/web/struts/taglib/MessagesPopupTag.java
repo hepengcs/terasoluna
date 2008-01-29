@@ -165,11 +165,11 @@ import org.apache.struts.action.ActionMessages;
 public class MessagesPopupTag extends TagSupport {
     
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 1148524236499924202L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 1148524236499924202L;
 
-	/**
+    /**
      * <code>onLoad</code> 時の処理をリクエスト属性に保存するときのキー。
      */
     public static final String ON_LOAD_KEY = BodyTag.ON_LOAD_KEY;

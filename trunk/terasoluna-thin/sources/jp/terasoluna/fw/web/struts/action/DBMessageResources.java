@@ -235,11 +235,11 @@ import org.apache.struts.util.MessageResourcesFactory;
 public class DBMessageResources extends MessageResources {
     
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8244415315747028752L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8244415315747028752L;
 
-	/**
+    /**
      * システム設定プロパティファイル（system.properties）内で
      * DAOを取得する際に使用するキー。
      */
@@ -267,7 +267,7 @@ public class DBMessageResources extends MessageResources {
      * ログクラス。
      */ 
     @SuppressWarnings("hiding")
-	private static Log log = LogFactory.getLog(DBMessageResources.class);
+    private static Log log = LogFactory.getLog(DBMessageResources.class);
 
     /**
      * DBから取得したメッセージキーとメッセージ文言を格納するMap。

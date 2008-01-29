@@ -105,11 +105,11 @@ import org.apache.commons.logging.LogFactory;
 public class IfAuthorizedBlockTag extends BodyTagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 1062137481352416171L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 1062137481352416171L;
 
-	/**
+    /**
      * ログクラス
      */
     private static Log log

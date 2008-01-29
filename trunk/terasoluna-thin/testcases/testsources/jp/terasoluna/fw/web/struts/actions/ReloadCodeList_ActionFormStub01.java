@@ -24,8 +24,8 @@ import org.apache.struts.action.ActionForm;
  */
 public class ReloadCodeList_ActionFormStub01 extends ActionForm {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8675948412172562304L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8675948412172562304L;
 }

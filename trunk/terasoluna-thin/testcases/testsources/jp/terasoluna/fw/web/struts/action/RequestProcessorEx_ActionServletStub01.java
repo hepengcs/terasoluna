@@ -31,11 +31,11 @@ public class RequestProcessorEx_ActionServletStub01
         extends ActionServlet {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -341656069363746392L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -341656069363746392L;
 
-	/**
+    /**
      * サーブレットコンテキストを返却する。
      * 
      * @return 擬似サーブレットコンテキスト

@@ -27,11 +27,11 @@ public class ActionFormUtil_ActionFormStub01
         extends ValidatorActionFormEx {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -1064691779244028892L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -1064691779244028892L;
 
-	/**
+    /**
      * field。
      */
     private String field = null;

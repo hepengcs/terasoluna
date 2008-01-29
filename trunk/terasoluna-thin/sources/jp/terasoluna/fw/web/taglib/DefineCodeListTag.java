@@ -114,11 +114,11 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 public class DefineCodeListTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 7550280327858449058L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 7550280327858449058L;
 
-	/**
+    /**
      * ログクラス。
      */
      private static Log log =

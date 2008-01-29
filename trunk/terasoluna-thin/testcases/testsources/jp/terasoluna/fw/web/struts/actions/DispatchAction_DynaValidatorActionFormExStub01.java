@@ -30,11 +30,11 @@ public class DispatchAction_DynaValidatorActionFormExStub01
     extends DynaValidatorActionFormEx {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 9102721715771892955L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 9102721715771892955L;
 
-	private final static Log log = LogFactory
+    private final static Log log = LogFactory
             .getLog(DispatchAction_DynaValidatorActionFormExStub01.class);
 
     /**

@@ -32,11 +32,11 @@ public class RequestProcessorEx_ValidatorActionFormExStub03
         extends ValidatorActionFormEx {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8739212369844208791L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8739212369844208791L;
 
-	/**
+    /**
      * 会社ID
      */
     private String companyId = null;

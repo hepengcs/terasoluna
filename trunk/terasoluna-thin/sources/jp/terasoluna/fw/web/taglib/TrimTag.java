@@ -71,12 +71,12 @@ import jp.terasoluna.fw.util.StringUtil;
  */
 public class TrimTag extends StringFormatterTagBase {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 8026613148973363578L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 8026613148973363578L;
 
-	/**
+    /**
      * 全角スペースのトリム可否属性。
      */
     protected boolean zenkaku = false;

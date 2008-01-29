@@ -116,7 +116,7 @@ public class RequestProcessorEx extends DelegatingRequestProcessor {
      * ログクラス。
      */
     @SuppressWarnings("hiding")
-	private static Log log
+    private static Log log
             = LogFactory.getLog(RequestProcessorEx.class);
 
     /**
@@ -204,8 +204,8 @@ public class RequestProcessorEx extends DelegatingRequestProcessor {
                 res,
                 (ActionMappingEx) mapping);
         }
-		// スーパークラスの processActionForm() を実行する
-		return super.processActionForm(req, res, mapping);
+        // スーパークラスの processActionForm() を実行する
+        return super.processActionForm(req, res, mapping);
     }
 
     /**
@@ -305,7 +305,7 @@ public class RequestProcessorEx extends DelegatingRequestProcessor {
                 // 以降は実行しない
                 return;
             }
-			req.removeAttribute(SKIP_POPULATE);
+            req.removeAttribute(SKIP_POPULATE);
         }
         // スーパークラスの processPopulate() を実行する
         super.processPopulate(req, res, form, mapping);

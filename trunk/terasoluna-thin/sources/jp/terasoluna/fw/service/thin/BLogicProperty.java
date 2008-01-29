@@ -43,11 +43,11 @@ import java.io.Serializable;
 public class BLogicProperty implements Serializable {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 7045786022774532390L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 7045786022774532390L;
 
-	/**
+    /**
      * Web層のオブジェクトのプロパティ名。
      */
     private String property = null;

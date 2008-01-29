@@ -79,11 +79,11 @@ import org.apache.struts.util.PropertyMessageResources;
 public class PropertyMessageResourcesEx extends PropertyMessageResources {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -8239553100324527837L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -8239553100324527837L;
 
-	/**
+    /**
      * コンストラクタ。
      *
      * @param factory このクラスのファクトリオブジェクト

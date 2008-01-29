@@ -136,11 +136,11 @@ public class ValidatorActionFormEx
     implements FormEx {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -744848917166154997L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -744848917166154997L;
 
-	/**
+    /**
      * ログクラス。
      */
     private static Log log = LogFactory.getLog(ValidatorActionFormEx.class);

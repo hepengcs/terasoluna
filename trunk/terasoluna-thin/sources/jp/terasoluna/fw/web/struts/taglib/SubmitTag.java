@@ -72,11 +72,11 @@ import org.apache.struts.taglib.TagUtils;
 public class SubmitTag extends org.apache.struts.taglib.html.SubmitTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -795727425454129052L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -795727425454129052L;
 
-	/**
+    /**
      * 指定するターゲット名
      */
     protected String target = null;

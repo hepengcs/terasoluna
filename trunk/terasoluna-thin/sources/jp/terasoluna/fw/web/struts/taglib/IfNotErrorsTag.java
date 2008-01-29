@@ -65,11 +65,11 @@ import org.apache.struts.Globals;
 public class IfNotErrorsTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 196326353099851849L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 196326353099851849L;
 
-	/**
+    /**
      * タグ評価開始時に呼ばれるメソッド。リクエストにエラー情報リストが
      * 設定されていないときにはボディ部分を出力し、設定されているときには
      * ボディ部分をスキップする。
@@ -87,8 +87,8 @@ public class IfNotErrorsTag extends TagSupport {
             // リクエストにエラー情報が含まれないときはボディ評価
             return EVAL_BODY_INCLUDE;
         }
-		// エラー情報が含まれるときはボディ評価をスキップ
-		return SKIP_BODY;
+        // エラー情報が含まれるときはボディ評価をスキップ
+        return SKIP_BODY;
     }
 
     /**

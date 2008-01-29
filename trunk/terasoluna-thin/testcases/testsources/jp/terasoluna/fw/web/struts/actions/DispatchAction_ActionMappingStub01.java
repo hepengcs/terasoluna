@@ -25,8 +25,8 @@ import org.apache.struts.action.ActionMapping;
  */
 public class DispatchAction_ActionMappingStub01 extends ActionMapping {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 4546446481122314527L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 4546446481122314527L;
 }

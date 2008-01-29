@@ -54,15 +54,15 @@ public class DefineCodeListTagTest extends SpringTestCase {
         junit.swingui.TestRunner.run(DefineCodeListTagTest.class);
     }
 
-	@Override
-	protected void doOnSetUp() throws Exception {
-	}
+    @Override
+    protected void doOnSetUp() throws Exception {
+    }
 
-	@Override
-	protected String[] getConfigLocations() {
-		return new String[]{
+    @Override
+    protected String[] getConfigLocations() {
+        return new String[]{
            "jp/terasoluna/fw/web/taglib/DefineCodeListTagTest.xml"};
-	}
+    }
 
 
     /**
@@ -91,27 +91,27 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag01() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		    = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
-		
-		// idが""場合
-		UTUtil.setPrivateField(tag,"id","");
-		
-		try {
-			// テスト実行
-			int result = tag.doStartTag();
-			// 判定
-			fail();
-		} catch (JspTagException ex) {
-			// 判定
-			// メッセージチェック
-			assertEquals("id is required.", ex.getMessage());
-			// ラップした例外チェック
-			assertNull(ex.getCause());
-			// ログチェック
-			assertTrue(LogUTUtil.checkError("id is required."));
-		}
+            = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+        
+        // idが""場合
+        UTUtil.setPrivateField(tag,"id","");
+        
+        try {
+            // テスト実行
+            int result = tag.doStartTag();
+            // 判定
+            fail();
+        } catch (JspTagException ex) {
+            // 判定
+            // メッセージチェック
+            assertEquals("id is required.", ex.getMessage());
+            // ラップした例外チェック
+            assertNull(ex.getCause());
+            // ログチェック
+            assertTrue(LogUTUtil.checkError("id is required."));
+        }
     }
 
     /**
@@ -145,9 +145,9 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag02() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		  = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+          = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
         MockPageContext pageContext
             = (MockPageContext) TagUTUtil.getPageContext(tag);
         MockServletConfig config = new MockServletConfig();
@@ -155,21 +155,21 @@ public class DefineCodeListTagTest extends SpringTestCase {
         UTUtil.setPrivateField(pageContext, "config", config);
         
         // getCodeBeans=null
-		UTUtil.setPrivateField(tag,"id","testLoader02");
+        UTUtil.setPrivateField(tag,"id","testLoader02");
 
-		// テスト実行
-		int result = tag.doStartTag();
-		
-		// 判定
-		// 戻り値
-		assertEquals(Tag.EVAL_BODY_INCLUDE,result);
-		// ログチェック
-		assertTrue(LogUTUtil.checkWarn(
+        // テスト実行
+        int result = tag.doStartTag();
+        
+        // 判定
+        // 戻り値
+        assertEquals(Tag.EVAL_BODY_INCLUDE,result);
+        // ログチェック
+        assertTrue(LogUTUtil.checkWarn(
                 "Codebean is null. CodeListLoader(bean id:testLoader02)"));
-		// pageスコープに"testLoader02"に空のArrayListが設定されること
-		ArrayList codeArrayList
+        // pageスコープに"testLoader02"に空のArrayListが設定されること
+        ArrayList codeArrayList
             = (ArrayList)pageContext.getAttribute("testLoader02");
-		assertEquals(0,codeArrayList.size());	
+        assertEquals(0,codeArrayList.size());	
     }
 
     /**
@@ -200,27 +200,27 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag03() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		    = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+            = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
         MockPageContext pageContext
             = (MockPageContext) TagUTUtil.getPageContext(tag);
         MockServletConfig config = new MockServletConfig();
         config.setServletContext(servletContext);
         UTUtil.setPrivateField(pageContext, "config", config);
-		// getCodeBeans={}（空の配列）
-		UTUtil.setPrivateField(tag, "id", "testLoader03");
+        // getCodeBeans={}（空の配列）
+        UTUtil.setPrivateField(tag, "id", "testLoader03");
 
-		// テスト実行
-		int result = tag.doStartTag();
-		
-		// 判定
-		// 戻り値
-		assertEquals(Tag.EVAL_BODY_INCLUDE, result);
-		// pageスコープに"testLoader"=空のCodeBean配列が設定されること
-		CodeBean[] codeBeans
+        // テスト実行
+        int result = tag.doStartTag();
+        
+        // 判定
+        // 戻り値
+        assertEquals(Tag.EVAL_BODY_INCLUDE, result);
+        // pageスコープに"testLoader"=空のCodeBean配列が設定されること
+        CodeBean[] codeBeans
             = (CodeBean[])pageContext.getAttribute("testLoader03");
-		assertEquals(0,codeBeans.length);	
+        assertEquals(0,codeBeans.length);	
     }
 
     /**
@@ -255,7 +255,7 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag04() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
             = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
         MockPageContext pageContext
@@ -265,23 +265,23 @@ public class DefineCodeListTagTest extends SpringTestCase {
         UTUtil.setPrivateField(pageContext, "config", config);
         
         // getCodeBeans={CodeBean("id","name") }
-		UTUtil.setPrivateField(tag,"id","testLoader04");
+        UTUtil.setPrivateField(tag,"id","testLoader04");
 
-		// テスト実行
-		int result = tag.doStartTag();
-		
-		// 判定
-		// 戻り値
-		assertEquals(Tag.EVAL_BODY_INCLUDE, result);
+        // テスト実行
+        int result = tag.doStartTag();
+        
+        // 判定
+        // 戻り値
+        assertEquals(Tag.EVAL_BODY_INCLUDE, result);
 
         //pageスコープに"testLoader"=CodeBean配列が設定されることを確認する
-		CodeBean[] codeBeans
+        CodeBean[] codeBeans
             = (CodeBean[]) pageContext	.getAttribute("testLoader04");
-		assertEquals(1, codeBeans.length);
-		CodeBean codeBean = codeBeans[0];
-		assertEquals("id", codeBean.getId());
-		assertEquals("name", codeBean.getName());
-		
+        assertEquals(1, codeBeans.length);
+        CodeBean codeBean = codeBeans[0];
+        assertEquals("id", codeBean.getId());
+        assertEquals("name", codeBean.getName());
+        
     }
 
     /**
@@ -322,7 +322,7 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag05() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
             = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
         MockPageContext pageContext
@@ -336,24 +336,24 @@ public class DefineCodeListTagTest extends SpringTestCase {
         //  CodeBean("id2","name2"),
         //  CodeBean("id3","name3"),
         //}
-		UTUtil.setPrivateField(tag,"id","testLoader05");
+        UTUtil.setPrivateField(tag,"id","testLoader05");
 
-		// テスト実行
-		int result = tag.doStartTag();
+        // テスト実行
+        int result = tag.doStartTag();
 
-		// 判定
-		// 戻り値
-		assertEquals(Tag.EVAL_BODY_INCLUDE, result);
-		
+        // 判定
+        // 戻り値
+        assertEquals(Tag.EVAL_BODY_INCLUDE, result);
+        
         //pageスコープに"testLoader"=CodeBean配列が設定されることを確認する
-		CodeBean[] codeBeans
+        CodeBean[] codeBeans
             = (CodeBean[])pageContext.getAttribute("testLoader05");
-		assertEquals(3,codeBeans.length);
-		for (int i = 0; i < codeBeans.length; i++) {
-			CodeBean codeBean = codeBeans[i];
-			assertEquals("id" + (i + 1), codeBean.getId());
-			assertEquals("name" + (i + 1), codeBean.getName());
-		}
+        assertEquals(3,codeBeans.length);
+        for (int i = 0; i < codeBeans.length; i++) {
+            CodeBean codeBean = codeBeans[i];
+            assertEquals("id" + (i + 1), codeBean.getId());
+            assertEquals("name" + (i + 1), codeBean.getName());
+        }
     }
 
     /**
@@ -387,9 +387,9 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoStartTag06() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		  = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+          = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
 
         MockPageContext pageContext =
         	(MockPageContext) TagUTUtil.getPageContext(tag);
@@ -397,25 +397,25 @@ public class DefineCodeListTagTest extends SpringTestCase {
         config.setServletContext(servletContext);
         UTUtil.setPrivateField(pageContext, "config", config);
 
-		// CodeListLoaderを実装しないクラスのインスタンス。
-		UTUtil.setPrivateField(tag, "id", "testLoader06");
-		try {
-			// テスト実行
-			int result = tag.doStartTag();
-			fail();
-		} catch (JspTagException ex) {
-			// 判定
-			// ラップした例外チェック
-			assertEquals(ClassCastException.class.getName(),
-					ex.getRootCause().getClass().getName());
-			// メッセージキーチェック
-			assertEquals(
-					"bean id:testLoader06 is not instance of CodeListLoader.",
-					ex.getMessage());
-			// ログチェック
-			assertTrue(LogUTUtil.checkError(
+        // CodeListLoaderを実装しないクラスのインスタンス。
+        UTUtil.setPrivateField(tag, "id", "testLoader06");
+        try {
+            // テスト実行
+            int result = tag.doStartTag();
+            fail();
+        } catch (JspTagException ex) {
+            // 判定
+            // ラップした例外チェック
+            assertEquals(ClassCastException.class.getName(),
+                    ex.getRootCause().getClass().getName());
+            // メッセージキーチェック
+            assertEquals(
+                    "bean id:testLoader06 is not instance of CodeListLoader.",
+                    ex.getMessage());
+            // ログチェック
+            assertTrue(LogUTUtil.checkError(
                     "bean id:testLoader06 is not instance of CodeListLoader."));
-		}
+        }
     }
 
     /**
@@ -437,15 +437,15 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testDoEndTag01() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		  = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+          = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
 
-		// テスト実施
+        // テスト実施
         int result = tag.doEndTag();
 
         // テスト結果確認
-		assertEquals(Tag.EVAL_PAGE, result);
+        assertEquals(Tag.EVAL_PAGE, result);
     }
 
     /**
@@ -468,12 +468,12 @@ public class DefineCodeListTagTest extends SpringTestCase {
      * @throws Exception このメソッドで発生した例外
      */
     public void testRelease01() throws Exception {
-		// 前処理
+        // 前処理
     	DefineCodeListTag tag
-		  = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
+          = (DefineCodeListTag) TagUTUtil.create(DefineCodeListTag.class);
         UTUtil.setPrivateField(tag, "id", "id");
 
-		// テスト実施
+        // テスト実施
         tag.release();
 
         // テスト結果確認

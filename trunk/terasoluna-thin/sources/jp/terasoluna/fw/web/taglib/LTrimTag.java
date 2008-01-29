@@ -80,12 +80,12 @@ import jp.terasoluna.fw.util.StringUtil;
  */
 public class LTrimTag extends StringFormatterTagBase {
 
-	/**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -6952812606364915110L;
+    /**
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -6952812606364915110L;
 
-	/**
+    /**
      * 全角スペースのトリム可否属性。
      */
     protected boolean zenkaku = false;

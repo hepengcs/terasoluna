@@ -39,11 +39,11 @@ import org.apache.struts.taglib.html.JavascriptValidatorTag;
 public class JavascriptValidatorTagEx extends JavascriptValidatorTag {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 879915691393426820L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 879915691393426820L;
 
-	/**
+    /**
      * タグの評価開始時に呼ばれる。
      * 半角カナ、全角カナのリストをFieldCheckExクラスの変数から
      * 取得し、JavaScriptの変数として出力する。

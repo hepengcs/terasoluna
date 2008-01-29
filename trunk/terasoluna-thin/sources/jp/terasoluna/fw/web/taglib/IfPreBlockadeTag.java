@@ -63,11 +63,11 @@ import jp.terasoluna.fw.web.thin.ServerBlockageController;
 public class IfPreBlockadeTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -7545297874735975274L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -7545297874735975274L;
 
-	/**
+    /**
      * タグ評価開始時に呼ばれるメソッド。
      *
      * @return 処理制御指示
@@ -85,8 +85,8 @@ public class IfPreBlockadeTag extends TagSupport {
             // 予閉塞状態または閉塞状態のときはボディ評価
             return EVAL_BODY_INCLUDE;
         }
-		// ボディ評価をスキップ
-		return SKIP_BODY;
+        // ボディ評価をスキップ
+        return SKIP_BODY;
     }
 
     /**

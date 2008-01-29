@@ -53,7 +53,7 @@ public abstract class DateFormatterTeiBase extends TagExtraInfo {
                                     true,
                                     VariableInfo.AT_BEGIN)};
         }
-		return new VariableInfo [] {};
+        return new VariableInfo [] {};
     }
 
 }

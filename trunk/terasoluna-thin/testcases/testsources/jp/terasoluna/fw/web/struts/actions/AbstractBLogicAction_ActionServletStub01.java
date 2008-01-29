@@ -27,11 +27,11 @@ import org.apache.struts.action.ActionServlet;
 public class AbstractBLogicAction_ActionServletStub01 extends ActionServlet {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 9132188050292574441L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 9132188050292574441L;
 
-	/**
+    /**
      * サーブレットコンテキスト。
      */
     private ServletContext ctx = null;

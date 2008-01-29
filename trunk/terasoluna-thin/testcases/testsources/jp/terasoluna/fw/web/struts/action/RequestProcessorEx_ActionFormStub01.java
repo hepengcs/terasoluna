@@ -33,11 +33,11 @@ public class RequestProcessorEx_ActionFormStub01
         extends ActionForm {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -3200430977789044538L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -3200430977789044538L;
 
-	/**
+    /**
      * 会社ID
      */
     private String companyId = null;

@@ -151,11 +151,11 @@ import jp.terasoluna.fw.util.DateUtil;
 public class JDateTag extends DateFormatterTagBase {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = 4097026346025126637L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = 4097026346025126637L;
 
-	/**
+    /**
      * <code>pattern</code> 属性で指定されたフォーマットにしたがって、
      * 指定された日付時刻データを和暦としてフォーマットする。
      *

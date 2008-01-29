@@ -288,11 +288,11 @@ import jp.terasoluna.fw.util.StringUtil;
 public class InputCalendarTag extends TagSupport {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -3163804374592471898L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -3163804374592471898L;
 
-	/**
+    /**
      * 対応テキストフィールド指定属性。
      * 選択した日付を入力するフィールド名を指定する。
      */

@@ -48,11 +48,11 @@ import org.apache.struts.util.MessageResourcesFactory;
 public class DBMessageResourcesFactory extends MessageResourcesFactory {
 
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -1027132907070919579L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -1027132907070919579L;
 
-	/**
+    /**
      *  新規にDBMessageResourcesを生成する。
      *
      * @param config リクエストバンドルに対する設定パラメータ

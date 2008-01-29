@@ -25,21 +25,21 @@ import jp.terasoluna.fw.web.codelist.CodeBean;
  * 
  */
 public class DefineCodeListTag_Stub01 {
-	
-	private Map<String, String> codeListMap = null;
+    
+    private Map<String, String> codeListMap = null;
 
-	public Map getCodeListMap() {
-		return codeListMap;
-	}
+    public Map getCodeListMap() {
+        return codeListMap;
+    }
 
-	public void setCodeListMap(Map<String, String> codeListMap) {
-		this.codeListMap = codeListMap;
-	}
+    public void setCodeListMap(Map<String, String> codeListMap) {
+        this.codeListMap = codeListMap;
+    }
 
-	public void load() {
-	}
+    public void load() {
+    }
 
-	public CodeBean[] getCodeBeans() {
-			return null;
-	}
+    public CodeBean[] getCodeBeans() {
+            return null;
+    }
 }

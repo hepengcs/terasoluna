@@ -111,8 +111,8 @@ public class BlockageControlFilterTest extends TestCase {
     		new BlockageControlFilter_BlockageControllerStub01();
     	
     	UTUtil.setPrivateField(BlockageControlFilter.class,
-				    			"controller",
-								existingController);
+                    			"controller",
+                        		existingController);
     	// フィルタの用意
     	BlockageControlFilter_BlockageControlFilterStub01 filter = 
     		new BlockageControlFilter_BlockageControlFilterStub01();
@@ -181,8 +181,8 @@ public class BlockageControlFilterTest extends TestCase {
     	assertSame(newConfig,UTUtil.getPrivateField(filter,"config"));
     	assertTrue(filter.isCalled);
     	assertSame(newController,
-	    			UTUtil.getPrivateField(BlockageControlFilter.class,
-	    					"controller"));
+        			UTUtil.getPrivateField(BlockageControlFilter.class,
+        					"controller"));
     }
 
     /**
@@ -210,7 +210,7 @@ public class BlockageControlFilterTest extends TestCase {
     		new BlockageControlFilter_BlockageControllerStub01();
     	
     	UTUtil.setPrivateField(BlockageControlFilter.class,
-				    			"controller",
+                    			"controller",
                                 existingController);
 
         // テスト実施

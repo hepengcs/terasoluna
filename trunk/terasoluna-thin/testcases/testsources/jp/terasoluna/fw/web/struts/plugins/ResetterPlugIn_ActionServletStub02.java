@@ -27,11 +27,11 @@ import org.apache.struts.action.ActionServlet;
  */
 public class ResetterPlugIn_ActionServletStub02 extends ActionServlet {
     /**
-	 * シリアルバージョンID
-	 */
-	private static final long serialVersionUID = -5781766880483415916L;
+     * シリアルバージョンID
+     */
+    private static final long serialVersionUID = -5781766880483415916L;
 
-	private ServletContext ctx = new ResetterPlugIn_MockServletContextStub01();
+    private ServletContext ctx = new ResetterPlugIn_MockServletContextStub01();
 
     /**
      * サーブレットコンテキストを返却する。
