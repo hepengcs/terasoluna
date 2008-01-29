@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="sources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-pool-1.3.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/ibatis-2.3.0.677.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/spring.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-commons.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-dao.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-ibatis.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-validator-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/lib/commonj-twm.jar"/>
+	<classpathentry kind="lib" path="/terasoluna-lib/dist/terasoluna-filedao.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>
