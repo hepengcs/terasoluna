@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN" "http://castor.exolab.org/mapping.dtd">
+
+<!-- 
+	マッピング定義が不正なマッピング定義ファイル
+	setMappingメソッド呼び出し時に例外が発生する。
+	
+	class要素に存在しないクラス定義している。
+ -->
+<mapping>
+  <class name="jp.terasoluna.fw.oxm.mapper.castor.xxxDTO">
+    <field name="param1" type="int" />
+    <field name="param2" type="date" />
+    <field name="param3" type="int" />
+    <field name="param4" type="sample.dto.Param4" />
+  </class>
+</mapping>
